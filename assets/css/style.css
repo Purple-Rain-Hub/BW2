@@ -5,4 +5,14 @@
 html,body{
     margin:0;
     padding:0;
+    background-color: #171717;
+}
+
+
+.bg-autoplay{
+    background-color: #2C2C2C;
+}
+
+.bg-cards{
+    background-color: #161616;
 }
