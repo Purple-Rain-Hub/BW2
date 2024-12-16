@@ -1,271 +1,216 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BW2</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
+</head>
 
-  <body class="bg-gradient bg-black">
+<body class="bg-gradient bg-black">
     <div class="row justify-content-between">
-      <header class="col-lg-2 bg-black vh-100">
-        <nav class="navbar navbar-expand-lg">
-          <div
-            class="container-fluid d-flex flex-column align-items-baseline px-3"
-          >
-            <a class="navbar-brand ps-2" href="#"
-              ><i class="bi bi-three-dots text-white"></i
-            ></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav flex-column">
-                <a
-                  class="nav-link text-white active"
-                  aria-current="page"
-                  href="#"
-                  ><i class="bi bi-house-door-fill text-white fs-5 me-3"></i
-                  >Home</a
-                >
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-search text-white fs-5 me-3"></i>Cerca</a
-                >
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-music-note-list text-white fs-5 me-3"></i>La
-                  tua libreria</a
-                >
-                <a class="nav-link text-white mt-3"
-                  ><i class="bi bi-plus-square-fill text-white fs-5 me-3"></i
-                  >Crea Playlist</a
-                >
-                <a class="nav-link text-white"
-                  ><img
-                    src="assets/imgs/liked songs spotify.jpeg"
-                    style="width: 22px"
-                    class="me-3"
-                  />Brani che ti piacciono</a
-                >
-                <a class="nav-link text-white"
-                  ><i
-                    class="bi bi-bookmark-fill text-success bg-danger p-1 me-3"
-                  ></i
-                  >I tuoi episodi</a
-                >
-              </div>
+        <header class="col-lg-2 bg-black vh-100">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid d-flex flex-column align-items-baseline px-3">
+                    <a class="navbar-brand ps-2" href="#"><i class="bi bi-three-dots text-white"></i></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav flex-column">
+                            <a class="nav-link text-white active" aria-current="page" href="#"><i
+                                    class="bi bi-house-door-fill text-white fs-5 me-3"></i>Home</a>
+                            <a class="nav-link text-white" href="#"><i
+                                    class="bi bi-search text-white fs-5 me-3"></i>Cerca</a>
+                            <a class="nav-link text-white" href="#"><i
+                                    class="bi bi-music-note-list text-white fs-5 me-3"></i>La
+                                tua libreria</a>
+                            <a class="nav-link text-white mt-3"><i
+                                    class="bi bi-plus-square-fill text-white fs-5 me-3"></i>Crea Playlist</a>
+                            <a class="nav-link text-white"><img src="assets/imgs/liked songs spotify.jpeg"
+                                    style="width: 22px" class="me-3" />Brani che ti piacciono</a>
+                            <a class="nav-link text-white"><i
+                                    class="bi bi-bookmark-fill text-success bg-danger p-1 me-3"></i>I tuoi episodi</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <hr class="text-secondary border-2 w-100 ms-2 me-1" />
+            <div>
+                <ul></ul>
             </div>
-          </div>
-        </nav>
-        <hr class="text-secondary border-2 w-100 ms-2 me-1" />
-        <div>
-          <ul></ul>
-        </div>
-      </header>
-      <main class="col-lg-8 py-4 px-5">
-        <section class="row">
-          <div class="col-lg-2">
-            <i
-              class="bi bi-chevron-left text-white bg-black p-1 pe-2"
-              style="border-radius: 50%"
-            ></i>
-            <i
-              class="bi bi-chevron-right text-white bg-black p-1 ps-2 rounded-5 ms-2"
-            ></i>
-          </div>
-          <!-- div vuoto per distanziare -->
-          <div class="col-lg-8"></div>
-          <div class="col-lg-2">
-            <div class="bg-black p-0 rounded-pill">
-              <img
-                src="assets/imgs/main/image-17.jpg"
-                class="rounded-5 d-inline-block"
-                style="width: 25px"
-              />
-              <p class="text-white d-inline-block m-0 px-3">Pippo Nacifra</p>
-              <i class="bi bi-caret-down-fill text-white"></i>
+        </header>
+        <main class="col-lg-8 py-4 px-5">
+            <section class="row">
+                <div class="col-lg-2">
+                    <i class="bi bi-chevron-left text-white bg-black p-1 pe-2" style="border-radius: 50%"></i>
+                    <i class="bi bi-chevron-right text-white bg-black p-1 ps-2 rounded-5 ms-2"></i>
+                </div>
+                <!-- div vuoto per distanziare -->
+                <div class="col-lg-8"></div>
+                <div class="col-lg-2">
+                    <div class="bg-black p-0 rounded-pill">
+                        <img src="assets/imgs/main/image-17.jpg" class="rounded-5 d-inline-block" style="width: 25px" />
+                        <p class="text-white d-inline-block m-0 px-3">Pippo Nacifra</p>
+                        <i class="bi bi-caret-down-fill text-white"></i>
+                    </div>
+                </div>
+                <div class="col-lg-12 d-flex bg-gradient bg-black p-3 py-4">
+                    <img src="assets/imgs/main/image-1.jpg" style="width: 250px" />
+                    <div class="ms-3">
+                        <h6 style="font-size: 75%">ALBUM</h6>
+                        <h1 class="fw-bolder m-0" style="font-size: 4em">
+                            *TITOLO SINGOLO*
+                        </h1>
+                        <h2 class="fs-6 fw-normal">*artisti della canzona*</h2>
+                        <p class="mt-3">Ascolta il nuovo singolo di *artista*</p>
+                        <div>
+                            <button type="button" class="btn bg-success rounded-pill fw-bold p-2 px-4"
+                                style="font-size: 80%">
+                                Play
+                            </button>
+                            <button type="button"
+                                class="btn border border-1 border-secondary rounded-pill fw-bold p-2 px-4 text-white ms-3"
+                                style="font-size: 80%">
+                                Salva
+                            </button>
+                            <i class="bi bi-three-dots text-white fs-4 ms-4"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h4 class="mt-4 fw-bolder fs-2">Buonasera</h4>
+                <div class="row mt-2 gy-3">
+                    <div class="col-lg-4">
+                        <div class="d-flex align-items-center bg-dark p-0 rounded-2">
+                            <img src="assets/imgs/main/image-10.jpg" style="width: 70px" class="rounded-start-2" />
+                            <h2 class="fs-6 ms-3 mt-1">*nome Playlist</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex align-items-center bg-dark p-0 rounded-2">
+                            <img src="assets/imgs/main/image-10.jpg" style="width: 70px" class="rounded-start-2" />
+                            <h2 class="fs-6 ms-3 mt-1">*nome Playlist</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex align-items-center bg-dark p-0 rounded-2">
+                            <img src="assets/imgs/main/image-10.jpg" style="width: 70px" class="rounded-start-2" />
+                            <h2 class="fs-6 ms-3 mt-1">*nome Playlist</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex align-items-center bg-dark p-0 rounded-2">
+                            <img src="assets/imgs/main/image-10.jpg" style="width: 70px" class="rounded-start-2" />
+                            <h2 class="fs-6 ms-3 mt-1">*nome Playlist</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex align-items-center bg-dark p-0 rounded-2">
+                            <img src="assets/imgs/main/image-10.jpg" style="width: 70px" class="rounded-start-2" />
+                            <h2 class="fs-6 ms-3 mt-1">*nome Playlist</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex align-items-center bg-dark p-0 rounded-2">
+                            <img src="assets/imgs/main/image-10.jpg" style="width: 70px" class="rounded-start-2" />
+                            <h2 class="fs-6 ms-3 mt-1">*nome Playlist</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h4 class="mt-4 fw-bolder fs-4">Altro di ciò che piace</h4>
+                <div class="row justify-content-around">
+                    <div class="col-lg-2 p-2 text-center rounded-2 bg-cards">
+                        <img class="rounded-2" src="assets/imgs/main/image-5.jpg" style="width: 180px" />
+                        <div class="text-start">
+                            <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
+                            <p>*autore</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+                        <img class="rounded-2" src="assets/imgs/main/image-5.jpg" style="width: 180px" />
+                        <div class="text-start">
+                            <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
+                            <p>*autore</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+                        <img class="rounded-2" src="assets/imgs/main/image-5.jpg" style="width: 180px" />
+                        <div class="text-start">
+                            <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
+                            <p>*autore</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+                        <img class="rounded-2" src="assets/imgs/main/image-5.jpg" style="width: 180px" />
+                        <div class="text-start">
+                            <h4 class="fs-6 fw-bold mt-3 ">*nomeAlbum</h4>
+                            <p>*autore</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+                        <img class="rounded-2" src="assets/imgs/main/image-5.jpg" style="width: 180px" />
+                        <div class="text-start ">
+                            <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
+                            <p>*autore</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <aside class="col-lg-2 bg-black vh-100">
+            <div class="d-flex justify-content-between p-4">
+                <h6>Attività amici</h6>
+                <div>
+                    <i class="bi bi-person"></i>
+                    <i class="bi bi-x-lg ms-2"></i>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-12 d-flex bg-gradient bg-black p-3 py-4">
-            <img src="assets/imgs/main/image-1.jpg" style="width: 250px" />
-            <div class="ms-3">
-              <h6 style="font-size: 75%">ALBUM</h6>
-              <h1 class="fw-bolder m-0" style="font-size: 4em">
-                *TITOLO SINGOLO*
-              </h1>
-              <h2 class="fs-6 fw-normal">*artisti della canzona*</h2>
-              <p class="mt-3">Ascolta il nuovo singolo di *artista*</p>
-              <div>
-                <button
-                  type="button"
-                  class="btn bg-success rounded-pill fw-bold p-2 px-4"
-                  style="font-size: 80%"
-                >
-                  Play
-                </button>
-                <button
-                  type="button"
-                  class="btn border border-1 border-secondary rounded-pill fw-bold p-2 px-4 text-white ms-3"
-                  style="font-size: 80%"
-                >
-                  Salva
-                </button>
-                <i class="bi bi-three-dots text-white fs-4 ms-4"></i>
-              </div>
+            <div class="d-flex ms-2 mt-3">
+                <img src="assets/imgs/search/image-22.jpg" style="width: 50px; height: 50px;" class="rounded-circle me-3">
+                <div>
+                    <div class="d-flex justify-content-between">
+                        <h6 class="m-0">Charlie Hookham</h6>
+                        <p class="m-0">4 ore</p>
+                    </div>
+                    <p>In Camera - Yumi Zouma <br> <i class="bi bi-disc"></i> EP III</p>
+                </div>
             </div>
-          </div>
-        </section>
-        <section>
-          <h4 class="mt-4 fw-bolder fs-2">Buonasera</h4>
-          <div class="row mt-2 gy-3">
-            <div class="col-lg-4">
-              <div class="d-flex align-items-center bg-dark p-0 rounded-2">
-                <img
-                  src="assets/imgs/main/image-10.jpg"
-                  style="width: 70px"
-                  class="rounded-start-2"
-                />
-                <h2 class="fs-6 ms-3 mt-1">*nome Playlist</h2>
-              </div>
+            <div class="d-flex ms-2 mt-3">
+                <img src="assets/imgs/search/image-22.jpg" style="width: 50px; height: 50px;" class="rounded-circle me-3">
+                <div>
+                    <div class="d-flex justify-content-between">
+                        <h6 class="m-0">Charlie Hookham</h6>
+                        <p class="m-0">4 ore</p>
+                    </div>
+                    <p>In Camera - Yumi Zouma <br> <i class="bi bi-disc"></i> EP III</p>
+                </div>
             </div>
-            <div class="col-lg-4">
-              <div class="d-flex align-items-center bg-dark p-0 rounded-2">
-                <img
-                  src="assets/imgs/main/image-10.jpg"
-                  style="width: 70px"
-                  class="rounded-start-2"
-                />
-                <h2 class="fs-6 ms-3 mt-1">*nome Playlist</h2>
-              </div>
+            <div class="d-flex ms-2 mt-3">
+                <img src="assets/imgs/search/image-22.jpg" style="width: 50px; height: 50px;" class="rounded-circle me-3">
+                <div>
+                    <div class="d-flex justify-content-between">
+                        <h6 class="m-0">Charlie Hookham</h6>
+                        <p class="m-0">4 ore</p>
+                    </div>
+                    <p>In Camera - Yumi Zouma <br> <i class="bi bi-disc"></i> EP III</p>
+                </div>
             </div>
-            <div class="col-lg-4">
-              <div class="d-flex align-items-center bg-dark p-0 rounded-2">
-                <img
-                  src="assets/imgs/main/image-10.jpg"
-                  style="width: 70px"
-                  class="rounded-start-2"
-                />
-                <h2 class="fs-6 ms-3 mt-1">*nome Playlist</h2>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="d-flex align-items-center bg-dark p-0 rounded-2">
-                <img
-                  src="assets/imgs/main/image-10.jpg"
-                  style="width: 70px"
-                  class="rounded-start-2"
-                />
-                <h2 class="fs-6 ms-3 mt-1">*nome Playlist</h2>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="d-flex align-items-center bg-dark p-0 rounded-2">
-                <img
-                  src="assets/imgs/main/image-10.jpg"
-                  style="width: 70px"
-                  class="rounded-start-2"
-                />
-                <h2 class="fs-6 ms-3 mt-1">*nome Playlist</h2>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="d-flex align-items-center bg-dark p-0 rounded-2">
-                <img
-                  src="assets/imgs/main/image-10.jpg"
-                  style="width: 70px"
-                  class="rounded-start-2"
-                />
-                <h2 class="fs-6 ms-3 mt-1">*nome Playlist</h2>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <h4 class="mt-4 fw-bolder fs-4">Altro di ciò che piace</h4>
-          <div class="row justify-content-around">
-            <div class="col-lg-2 p-2 text-center rounded-2 bg-cards">
-              <img
-                class="rounded-2"
-                src="assets/imgs/main/image-5.jpg"
-                style="width: 180px"
-              />
-              <div class="text-start">
-                <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
-                <p>*autore</p>
-              </div>
-            </div>
-            <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
-              <img
-                class="rounded-2"
-                src="assets/imgs/main/image-5.jpg"
-                style="width: 180px"
-              />
-              <div class="text-start">
-                <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
-                <p>*autore</p>
-              </div>
-            </div>
-            <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
-              <img
-                class="rounded-2"
-                src="assets/imgs/main/image-5.jpg"
-                style="width: 180px"
-              />
-              <div class="text-start">
-                <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
-                <p>*autore</p>
-              </div>
-            </div>
-            <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
-              <img
-                class="rounded-2"
-                src="assets/imgs/main/image-5.jpg"
-                style="width: 180px"
-              />
-              <div class="text-start">
-                <h4 class="fs-6 fw-bold mt-3 ">*nomeAlbum</h4>
-                <p>*autore</p>
-              </div>
-            </div>
-            <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
-              <img
-                class="rounded-2"
-                src="assets/imgs/main/image-5.jpg"
-                style="width: 180px"
-              />
-              <div class="text-start ">
-                <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
-                <p>*autore</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <aside class="col-lg-2 bg-black vh-100"></aside>
+        </aside>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
