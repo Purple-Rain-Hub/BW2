@@ -2,12 +2,34 @@
     box-sizing: border-box;
     color: white;
 }
+
+/* main page */
+
 html,body{
     margin:0;
     padding:0;
     background-color: #171717;
 }
 
+.bg-account{
+    background-color: #0E0E0E;
+}
+
+.bg-Na{
+    background-color: #222222;
+}
+
+.bf-Itp{
+    background-color: #004537;
+}
+
+.bg-play{
+    background-color: #1ED760;
+}
+
+.bg-save{
+    background-color: #0E0E0E;
+}
 
 .bg-autoplay{
     background-color: #2C2C2C;
@@ -15,4 +37,10 @@ html,body{
 
 .bg-cards{
     background-color: #161616;
+}
+
+/* album */
+
+.bg-startPlayslist{
+   background-color: #1ED760;
 }
