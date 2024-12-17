@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    color: white;
+}
+html,body{
+    margin:0;
+    padding:0;
+    background-color: #171717;
+}
+
+
+.bg-autoplay{
+    background-color: #2C2C2C;
+}
+
+.bg-cards{
+    background-color: #161616;
+}
+
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .imguno {
+      width: 135px;
+      height: 135px;
+    }
+    .pad {
+        font-size: 1rem;
+    }
+  }
+  
