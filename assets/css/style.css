@@ -62,3 +62,37 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
         background-color: #131313 !important;
     }
 }
+
+/* classe testo dell'aside */
+.aside-text{
+    font-size: 70%;
+}
+.aside-text-p {
+ font-size: 70%;
+}
+
+/* modifiche per blocco di pippo na cifra */
+.bi-chevron{
+    font-size: 80%;
+}
+
+.username{
+    font-size: 80%;
+}
+
+/* div canzone principale home */
+@media screen and (max-width: 993px) {
+    #h1Div-index h1{
+        font-size: 150% !important;
+    }
+    #h1Div-index p{
+        font-size: 75%;
+    }
+}
+
+/* immagini delle cards */
+@media screen and (max-width: 768px){
+.altro-cards img{
+    width: 40% !important;
+}
+}
