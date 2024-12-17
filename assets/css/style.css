@@ -48,13 +48,22 @@ html,body{
     background-color: #171717;
 }
 .albumImg{
-    left:165px;
-    top:65px;
+    left:5px;
+    top:35px;
 }
 .titleTrack{
-    left:230px;
-    top:60px;
+    left:85px;
+    top:40px;
 }
 .playerMusic{
     height:150px;
+    z-index:1000;
+}
+
+.bi-heart{
+    left:250px;
+    top:45px;
+}
+.btn {
+    position: relative;
 }
