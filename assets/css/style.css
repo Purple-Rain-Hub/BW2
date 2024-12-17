@@ -44,3 +44,17 @@ html,body{
 .bg-startPlayslist{
    background-color: #1ED760;
 }
+.cardPlayer{
+    background-color: #171717;
+}
+.albumImg{
+    left:165px;
+    top:65px;
+}
+.titleTrack{
+    left:230px;
+    top:60px;
+}
+.playerMusic{
+    height:150px;
+}
