@@ -3,14 +3,13 @@
     color: white;
 }
 
-/* main page */
-
 html,body{
     margin:0;
     padding:0;
     background-color: #171717;
 }
 
+/* COLORI */
 .bg-account{
     background-color: #0E0E0E;
 }
@@ -19,7 +18,7 @@ html,body{
     background-color: #222222;
 }
 
-.bf-Itp{
+.bg-Itp{
     background-color: #004537;
 }
 
@@ -39,8 +38,16 @@ html,body{
     background-color: #161616;
 }
 
-/* album */
-
 .bg-startPlayslist{
    background-color: #1ED760;
+}
+
+.bg-spotify{
+    background-color: #121212;
+}
+
+@media screen and (max-width: 577px) {
+    .bg-dark{
+        background-color: #131313 !important;
+    }
 }
