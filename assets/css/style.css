@@ -85,3 +85,72 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
 .btn {
     position: relative;
 }
+.backImage{
+    background-image: url(https://yellowcardrock.com/wp-content/uploads/2016/06/socialsharingbackgroundYELLOWCARD.png);
+    height:30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+.artistDate{
+    left:5px;
+    top:80px;
+}
+.likeTrack{
+    right:35px;
+    top:25px;
+}
+.likeImg{
+    right:250px;
+    top:10px;
+}
+.likeArtist{
+    right:70px;
+    top:45px;
+}
+@media (max-width:576px){
+    .artistDate{
+        top:45px;
+        left:0;
+    }
+    .artistDate h1{
+        font-size:65px !important;
+    }
+    .likeImg{
+        left:30px !important;
+        top:0px !important;
+
+    }
+    .track{
+        bottom:340px !important;
+        left:130px !important;
+    }
+    .likeTrack{
+        left:60px !important;
+    }
+    .likeArtist{
+        left:60px !important;
+    }
+    .numberAudio1,
+    .numberAudio2,.numberAudio3,
+    .numberAudio4,.numberAudio5{
+    left:129px !important;
+    
+    }
+    .numberAudio1{
+        top:630px !important;
+    }
+    .numberAudio2{
+        top:705px !important;
+    }
+    .numberAudio3{
+        bottom:15px !important;
+    }
+    .numberAudio4{
+        top:860px !important;
+    }
+    .numberAudio5{
+        top:935px !important;
+    }
+}
