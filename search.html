@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BW2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-gradient bg-black">
+    <div class="row justify-content-between">
+      <header class="col-lg-2 bg-black vh-100">
+        <nav class="navbar navbar-expand-lg">
+          <div
+            class="container-fluid d-flex flex-column align-items-baseline px-3"
+          >
+            <a class="navbar-brand ps-2" href="#"
+              ><i class="bi bi-three-dots text-white"></i
+            ></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav flex-column">
+                <a
+                  class="nav-link text-white active"
+                  aria-current="page"
+                  href="#"
+                  ><i class="bi bi-house-door-fill text-white fs-5 me-3"></i
+                  >Home</a
+                >
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-search text-white fs-5 me-3"></i>Cerca</a
+                >
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-music-note-list text-white fs-5 me-3"></i>La
+                  tua libreria</a
+                >
+                <a class="nav-link text-white mt-3"
+                  ><i class="bi bi-plus-square-fill text-white fs-5 me-3"></i
+                  >Crea Playlist</a
+                >
+                <a class="nav-link text-white"
+                  ><img
+                    src="assets/imgs/liked songs spotify.jpeg"
+                    style="width: 22px"
+                    class="me-3"
+                  />Brani che ti piacciono</a
+                >
+                <a class="nav-link text-white"
+                  ><i
+                    class="bi bi-bookmark-fill text-success bg-danger p-1 me-3"
+                  ></i
+                  >I tuoi episodi</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+        <hr class="text-secondary border-2 w-100 ms-2 me-1" />
+        <div>
+          <ul></ul>
+        </div>
+      </header>
+      <main class="col-lg-8 py-4 px-5">
+        <section class="row">
+          <div class="col-lg-9 p-1 ">
+            <button type="button" class="btn btn-secondary rounded-4 ">Tutto</button>
+            <button type="button" class="btn btn-secondary  rounded-4">Artisti</button>
+            <button type="button" class="btn btn-secondary  rounded-4">Brani</button>
+            <button type="button" class="btn btn-secondary  rounded-4">Playlist</button>
+            <button type="button" class="btn btn-secondary  rounded-4">Album</button>
+          </div>
+          <!-- div vuoto per distanziare -->
+         
+          <div class="col-lg-3">
+            <div class="bg-black p-0 rounded-pill">
+               
+              <img
+                src="assets/imgs/main/image-17.jpg"
+                class="rounded-5 d-inline-block"
+                style="width: 25px"
+              />
+              <p class="text-white d-inline-block m-0 px-3">Pippo Nacifra</p>
+              <i class="bi bi-caret-down-fill text-white"></i>
+            </div>
+          </div>
+
+<div class="col-lg-4 mt-2 mb-2" style="max-height: 250px;">
+    <h3>Risultato più rilevante</h3>
+    <div class="bg-dark" style="height:250px;">
+        <img src="assets/imgs/main/image-9.jpg" style="max-width: 100px;" class="rounded-pill m-4 " >
+        <p class="h2"> Nome dell artista</p>
+        <p> tipo es arista , album in base a quello che trova</p>
+
+    </div>
+
+</div>
+<div class="col-lg-8 mt-2 mb-2" style="max-height: 250px;">
+    <h3>Brani</h3>
+    <div class="d-flex" >
+        <img src="assets/imgs/main/image-7.jpg" style="width: 50px; height: 50px;">
+        <div class="ms-2">
+            <p class="h5 p-0 m-0">titolo della canzone </p>
+            <p> autore , possibile feet</p>
+        </div>
+    </div>
+    <div class="d-flex">
+        <img src="assets/imgs/main/image-7.jpg" style="width: 50px; height: 50px;">
+        <div class="ms-2">
+            <p class="h5 p-0 m-0">titolo della canzone </p>
+            <p> autore , possibile feet</p>
+        </div>
+    </div>
+    <div class="d-flex">
+        <img src="assets/imgs/main/image-7.jpg" style="width: 50px; height: 50px;">
+        <div class="ms-2">
+            <p class="h5 p-0 m-0">titolo della canzone </p>
+            <p> autore , possibile feet</p>
+        </div>
+    </div>
+    <div class="d-flex">
+        <img src="assets/imgs/main/image-7.jpg" style="width: 50px; height: 50px;">
+        <div class="ms-2">
+            <p class="h5 p-0 m-0">titolo della canzone </p>
+            <p> autore , possibile feet</p>
+        </div>
+    </div>
+</div>
+          
+        
+        
+          
+<section class="mt-lg-5">  
+        <section>
+          <h4 class="mt-4 fw-bolder fs-4 ms-3">quello che ci esce in base alla ricerca</h4>
+          <div class="row justify-content-around">
+            <div class="col-lg-2 p-2 text-center rounded-2 bg-cards">
+              <img
+                class="rounded-2"
+                src="assets/imgs/main/image-5.jpg"
+                style="width: 180px"
+              />
+              <div class="text-start">
+                <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
+                <p>*autore</p>
+              </div>
+            </div>
+            <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+              <img
+                class="rounded-2"
+                src="assets/imgs/main/image-5.jpg"
+                style="width: 180px"
+              />
+              <div class="text-start">
+                <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
+                <p>*autore</p>
+              </div>
+            </div>
+            <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+              <img
+                class="rounded-2"
+                src="assets/imgs/main/image-5.jpg"
+                style="width: 180px"
+              />
+              <div class="text-start">
+                <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
+                <p>*autore</p>
+              </div>
+            </div>
+            <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+              <img
+                class="rounded-2"
+                src="assets/imgs/main/image-5.jpg"
+                style="width: 180px"
+              />
+              <div class="text-start">
+                <h4 class="fs-6 fw-bold mt-3 ">*nomeAlbum</h4>
+                <p>*autore</p>
+              </div>
+            </div>
+            <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+              <img
+                class="rounded-2"
+                src="assets/imgs/main/image-5.jpg"
+                style="width: 180px"
+              />
+              <div class="text-start ">
+                <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
+                <p>*autore</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--sezione artisti-->
+        <section>
+            <h4 class="mt-4 fw-bolder fs-4 ms-3">Artisti</h4>
+          <div class="row justify-content-around">
+            <div class="col-lg-2 p-2 text-center rounded-2 bg-cards">
+              <img
+                class="rounded-pill"
+                src="assets/imgs/main/image-5.jpg"
+                style="width: 180px"
+              />
+              <div class="text-start">
+                <h4 class="fs-6 fw-bold mt-3">*nomeArtista</h4>
+                <p>Artista</p>
+              </div>
+            </div>
+            <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+              <img
+                class="rounded-pill"
+                src="assets/imgs/main/image-5.jpg"
+                style="width: 180px"
+              />
+              <div class="text-start">
+                <h4 class="fs-6 fw-bold mt-3">*nomeArtista</h4>
+                <p>Artista</p>
+              </div>
+            </div>
+            <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+              <img
+                class="rounded-pill"
+                src="assets/imgs/main/image-5.jpg"
+                style="width: 180px"
+              />
+              <div class="text-start">
+                <h4 class="fs-6 fw-bold mt-3">*nomeArtista</h4>
+                <p>Artista</p>
+              </div>
+            </div>
+            <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+              <img
+                class="rounded-pill"
+                src="assets/imgs/main/image-5.jpg"
+                style="width: 180px"
+              />
+              <div class="text-start">
+                <h4 class="fs-6 fw-bold mt-3 ">*nomeArtista</h4>
+                <p>Artista</p>
+              </div>
+            </div>
+            <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+              <img
+                class="rounded-pill"
+                src="assets/imgs/main/image-5.jpg"
+                style="width: 180px"
+              />
+              <div class="text-start ">
+                <h4 class="fs-6 fw-bold mt-3">*nomeArtista</h4>
+                <p>Artista</p>
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <!--sezione album-->
+        <section>
+            <h4 class="mt-4 fw-bolder fs-4 ms-3">Album</h4>
+            <div class="row justify-content-around">
+              <div class="col-lg-2 p-2 text-center rounded-2 bg-cards">
+                <img
+                  class="rounded-2"
+                  src="assets/imgs/main/image-5.jpg"
+                  style="width: 180px"
+                />
+                <div class="text-start">
+                  <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
+                  <div class="d-flex"><p>*anno del album <p> artista nel caso serva spero che vada sotto
+                </p></p></div>
+                
+                </div>
+              </div>
+              <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+                <img
+                  class="rounded-2"
+                  src="assets/imgs/main/image-5.jpg"
+                  style="width: 180px"
+                />
+                <div class="text-start">
+                  <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
+                  <div class="d-flex"><p>*anno del album <p> artista nel caso serva spero che vada sotto
+                </p></p></div>
+                
+                </div>
+              </div>
+              <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+                <img
+                  class="rounded-2"
+                  src="assets/imgs/main/image-5.jpg"
+                  style="width: 180px"
+                />
+                <div class="text-start">
+                  <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
+                  <div class="d-flex"><p>*anno del album <p> artista nel caso serva spero che vada sotto
+                </p></p></div>
+                
+                </div>
+              </div>
+              <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+                <img
+                  class="rounded-2"
+                  src="assets/imgs/main/image-5.jpg"
+                  style="width: 180px"
+                />
+                <div class="text-start">
+                  <h4 class="fs-6 fw-bold mt-3 ">*nomeAlbum</h4>
+                  <div class="d-flex"><p>*anno del album <p> artista nel caso serva spero che vada sotto
+                </p></p></div>
+                
+                </div>
+              </div>
+              <div class="col-lg-2 p-2  text-center rounded-2 bg-cards">
+                <img
+                  class="rounded-2"
+                  src="assets/imgs/main/image-5.jpg"
+                  style="width: 180px"
+                />
+                <div class="text-start">
+                  <h4 class="fs-6 fw-bold mt-3">*nomeAlbum</h4>
+                  <div class="d-flex"><p>*anno del album <p> artista nel caso serva spero che vada sotto
+                  </p></p></div>
+                  
+                </div>
+              </div>
+            </div>
+          </section>
+    </section>
+      </main>
+      <aside class="col-lg-2 bg-black vh-100"></aside>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
