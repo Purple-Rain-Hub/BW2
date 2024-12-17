@@ -62,26 +62,3 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
         background-color: #131313 !important;
     }
 }
-.cardPlayer{
-    background-color: #171717;
-}
-.albumImg{
-    left:5px;
-    top:35px;
-}
-.titleTrack{
-    left:85px;
-    top:40px;
-}
-.playerMusic{
-    height:150px;
-    z-index:1000;
-}
-
-.bi-heart{
-    left:250px;
-    top:45px;
-}
-.btn {
-    position: relative;
-}
