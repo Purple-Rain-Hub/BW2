@@ -77,6 +77,9 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     .divPrimo {
        --bs-gutter-x: 0px !important;
     }
+    #albumText{
+        font-size: 2.8em;
+    }
 }
 
 /* classe testo dell'aside */
@@ -104,6 +107,9 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     #h1Div-index p{
         font-size: 75%;
     }
+    .divPrimo {
+        --bs-gutter-x: 0px !important;
+     }
 }
 
 /* immagini delle cards */
