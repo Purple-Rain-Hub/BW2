@@ -105,7 +105,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-12 p-3 py-4 mt-3 position-relative">
+          <div class="col-lg-12 p-3 py-4 mt-3 position-relative artist">
             <div class="ms-3 position-absolute artistDate">
               <h6 class="d-sm-none" style="font-size: 75%">
                 <i
@@ -114,7 +114,7 @@
                 ></i
                 >Artista verificato
               </h6>
-              <h1 class="fw-bolder m-0" style="font-size: 4em" >
+              <h1 class="fw-bolder" style="font-size: 4em" >
                 *NOME ARTISTA*
               </h1>
               <p class="mt-3 mx-2">x ascoltatori mensili</p>
@@ -124,9 +124,9 @@
 
         <section class="mt-2">
           <div class="d-flex align-items-center">
-            <button class="btn d-sm-none">
+            <button class="btn">
               <i
-                class="bi bi-play-circle-fill"
+                class="bi bi-play-circle-fill d-sm-none d-xl-block"
                 style="color: forestgreen; font-size: 60px"
               ></i>
             </button>
@@ -161,7 +161,7 @@
                 di quello che te pare</span
               >
             </div>
-            <div class="orderedList mt-sm-4">
+            <div class="orderedList mt-sm-4 mt-lg-0">
               <ol class="d-flex flex-column align-items-baseline">
                 <li class="d-flex mt-3">
                   <span class="text-secondary mt-3 mx-2">1</span
@@ -171,7 +171,7 @@
                   />
                   <p class="mt-3 mx-4">nomeCanzone</p>
                   <span class="mt-3 mx-5 position-absolute numberAudio1 mt-sm-1 ">ascoltatorinumero</span
-                  ><span class="mt-3 mx-5 ">duratacanzone</span>
+                  ><span class="mt-3 mx-5 position-absolute duration">duratacanzone</span>
                 </li>
                 <li class="d-flex mt-3">
                   <span class="text-secondary mt-3 mx-2">2</span
@@ -181,7 +181,7 @@
                   />
                   <p class="mt-3 mx-4">nomeCanzone</p>
                   <span class="mt-3 mx-5 position-absolute numberAudio2 mt-sm-1">ascoltatorinumero</span
-                  ><span class="mt-3 mx-5">duratacanzone</span>
+                  ><span class="mt-3 mx-5 position-absolute duration">duratacanzone</span>
                 </li>
                 <li class="d-flex mt-3">
                   <span class="text-secondary mt-3 mx-2">3</span
@@ -191,7 +191,7 @@
                   />
                   <p class="mt-3 mx-4">nomeCanzone</p>
                   <span class="mt-3 mx-5 position-absolute numberAudio3 mt-sm-1">ascoltatorinumero</span
-                  ><span class="mt-3 mx-5">duratacanzone</span>
+                  ><span class="mt-3 mx-5 position-absolute duration">duratacanzone</span>
                 </li>
                 <li class="d-flex mt-3">
                   <span class="text-secondary mt-3 mx-2">4</span
@@ -201,7 +201,7 @@
                   />
                   <p class="mt-3 mx-4">nomeCanzone</p>
                   <span class="mt-3 mx-5 position-absolute numberAudio4 mt-sm-1">ascoltatorinumero</span
-                  ><span class="mt-3 mx-5">duratacanzone</span>
+                  ><span class="mt-3 mx-5 position-absolute duration">duratacanzone</span>
                 </li>
                 <li class="d-flex mt-3">
                   <span class="text-secondary mt-3 mx-2">5</span
@@ -211,10 +211,10 @@
                   />
                   <p class="mt-3 mx-4">nomeCanzone</p>
                   <span class="mt-3 mx-5 position-absolute numberAudio5 mt-sm-1">ascoltatorinumero</span
-                  ><span class="mt-3 mx-5">duratacanzone</span>
+                  ><span class="mt-3 mx-5 position-absolute duration">duratacanzone</span>
                 </li>
               </ol>
-              <button type="button" class="btn text-white mt-2 d-sm-none">
+              <button type="button" class="btn text-white mt-2 d-sm-none d-lg-block">
                 VISUALIZZA ALTRO
               </button>
             </div>
@@ -222,7 +222,7 @@
         </section>
         <div style="height: 150px"></div>
       </main>
-      <aside class="col-lg-2 bg-black container-fluid d-none d-lg-block">
+      <aside class="col-lg-2 bg-black container-fluid d-sm-none d-md-none d-lg-block">
         <div class="d-flex justify-content-between p-4">
           <h6>Attività amici</h6>
           <div>

@@ -109,22 +109,19 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     right:70px;
     top:45px;
 }
-@media (max-width:576px){
-    .artistDate{
-        top:45px;
+@media screen and (max-width:576px){
+    section .artistDate{
+        top:45px !important;
         left:0;
-    }
-    .artistDate h1{
-        font-size:65px !important;
     }
     .likeImg{
         left:30px !important;
         top:0px !important;
 
     }
-    .track{
-        bottom:340px !important;
-        left:130px !important;
+    div .track{
+        bottom:380px !important;
+        left:35px !important;
     }
     .likeTrack{
         left:60px !important;
@@ -152,5 +149,220 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     }
     .numberAudio5{
         top:935px !important;
+    }
+    .duration{
+        right:90px !important;
+    }
+}
+@media screen and (max-width:768px) {
+    .artistDate{
+        top:120px !important;
+    }
+    .numberAudio1{
+        left:129px !important;
+        top:630px !important;
+    }
+    .numberAudio2{
+        left:129px !important;
+        top:705px !important;
+    }
+    .numberAudio3{
+        left:129px !important;
+        top:780px !important;
+    }
+    .numberAudio4{
+        left:129px !important;
+        top:855px !important;
+    }
+    .numberAudio5{
+        left:129px !important;
+        top:933px !important;
+    }
+    div .track{
+        top:370px !important;
+    }
+    .likeImg{
+        left:70px !important;
+        top:0px !important;
+    }
+    .likeArtist{
+        left:100px !important;
+        top:35px !important;
+    }
+    .likeTrack{
+        left:100px !important;
+        top:20px !important;
+    }
+    .duration{
+        right:100px !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+        .artistDate{
+            top:150px !important;
+        }
+        aside{
+            display: block !important;
+            left:0px !important;
+        }
+        .bi-play-circle-fill{
+            display:block !important;
+        }
+        div .track{
+            top:430px !important;
+        }
+        .likeImg{
+            left:67px !important;
+        }
+        .likeArtist{
+            left:85px !important;
+        }
+
+        .likeTrack{
+            left:85px !important;
+        }
+        .numberAudio1{
+            left:298px !important;
+            top:652px !important;
+        }
+        .numberAudio2{
+            left:298px !important;
+            top:730px !important;
+        }
+        .numberAudio3{
+            left:298px !important;
+            top:807px !important;
+        }
+        .numberAudio4{
+            left:298px !important;
+            top:883px !important;
+        }
+
+        .numberAudio5{
+            left:298px !important;
+            top:960px !important;
+        }
+
+        .duration{
+            right:180px !important;
+        }
+    }
+@media (min-width:993px) and (max-width:1200px){
+    div .track{
+        top:395px !important;
+    }
+    .artistDate{
+        top:137px !important;
+    }
+    .likeImg{
+        left:70px;
+    }
+    .likeArtist{
+        left:90px !important;
+    }
+    .likeTrack{
+        left:90px !important;
+    }
+    .numberAudio1{
+        left:333px !important;
+        top:653px !important;
+    }
+    .numberAudio2{
+        left:333px !important;
+        top:730px !important;
+    }
+    .numberAudio3{
+        left:333px !important;
+        top:806px !important;
+    }
+    .numberAudio4{
+        left:333px !important;
+        top:883px !important;
+    }
+    .numberAudio5{
+        left:333px !important;
+        top:959px !important;
+    }
+    .duration{
+        right:220px !important;
+    }
+}
+@media (min-width:1201px) and (max-width:1400px){
+    .artistDate{
+        top:135px !important;
+    }
+    .track{
+        top:435px !important;
+    }
+    .likeImg{
+        left:70px !important;
+    }
+    .likeArtist{
+        left:90px !important;
+    }
+    .likeTrack{
+        left:90px !important;
+    }
+    .numberAudio1{
+        left:650px !important;
+        top: 640px !important;
+    }
+    .numberAudio2{
+        left:650px !important;
+        top: 715px !important;
+    }
+    .numberAudio3{
+        left:650px !important;
+        top: 790px !important;
+    }
+    .numberAudio4{
+        left:650px !important;
+        top: 868px !important;
+    }
+    .numberAudio5{
+        left:650px !important;
+        top: 946px !important;
+    }
+    .duration{
+        right:250px !important;
+    }
+}
+@media (min-width:1401px) and (max-width:2000px){
+    .artistDate{
+        top:135px !important;
+    }
+    .track{
+        top:490px !important;
+    }
+    .likeImg{
+        bottom:85px !important;
+        right:300px !important;
+    }
+    .likeTrack{
+        top:20px !important;
+    }
+    .duration{
+        right:430px !important;
+    }
+    .numberAudio1{
+        right:830px !important;
+        top:640px !important;
+    }
+    .numberAudio2{
+        right:830px !important;
+        top:715px !important;
+    }
+    .numberAudio3{
+        right:830px !important;
+        top:795px !important;
+    }
+    .numberAudio4{
+        right:830px !important;
+        top:870px !important;
+    }
+    .numberAudio5{
+        right:830px !important;
+        top:945px !important;
     }
 }
