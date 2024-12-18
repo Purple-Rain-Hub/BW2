@@ -9,6 +9,7 @@ html,body{
     background-color: #171717;
 }
 
+
 /* COLORI */
 .bg-account{
     background-color: #0E0E0E;
@@ -73,6 +74,9 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     .bg-dark{
         background-color: #131313 !important;
     }
+    .divPrimo {
+       --bs-gutter-x: 0px !important;
+    }
 }
 
 /* classe testo dell'aside */
@@ -107,13 +111,9 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
 .altro-cards img{
     width: 40% !important;
 }
-.playerMusic{
-    height:150px;
-}
-
-#iconPlay{
-    bottom: 9%;
-    left: 12px;
+.divPrimo {
+    --bs-gutter-x: 0px !important;
+ }
 }
 
 @media screen and (min-width: 767px) {
@@ -129,5 +129,4 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     .larghezzaCard{
         width: 25% !important;
     }
-}
 }
