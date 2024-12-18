@@ -16,12 +16,27 @@ html,body{
 .bg-cards{
     background-color: #161616;
 }
+@media (min-width: 768px) and (max-width:992px) {
+    .navbar-expand-lg .navbar-nav .nav-link{
+        font-size: 0.7rem;
+    }
+    .imguno{
+        width: 75%;
+    }
+}
+
+@media  (min-width:768px) and (max-width: 1024px){
+    .fontl{
+        font-size: 0.5rem;
+    }
+    
+}
 
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
     .imguno {
-      width: 135px;
-      height: 135px;
+      width: 100px;
+      height: 100px;
     }
     .pad {
         font-size: 1rem;
