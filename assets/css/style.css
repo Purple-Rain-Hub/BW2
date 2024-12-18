@@ -9,6 +9,7 @@ html,body{
     background-color: #171717;
 }
 
+
 /* COLORI */
 .bg-account{
     background-color: #0E0E0E;
@@ -49,10 +50,22 @@ html,body{
 }
 
 .album-size {
-    width: 20%;
-    height: 20%;
+    width: 200px;
+    height: 200px;
 box-shadow: 0 4px 60px rgba(0,0,0,.5);
 }
+
+#albumText {
+    font-size: 4.6em;
+    font-weight: 900;
+}
+
+.scrittaAlbum{
+    font-size: 1em;
+     margin: 0; 
+     font-weight: 800;
+}
+
 .bg-spotify{
     background-color: #121212;
 }
@@ -61,26 +74,17 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     .bg-dark{
         background-color: #131313 !important;
     }
-}
-.cardPlayer{
-    background-color: #171717;
-}
-.albumImg{
-    left:5px;
-    top:35px;
-}
-.titleTrack{
-    left:85px;
-    top:40px;
-}
-.playerMusic{
-    height:150px;
-    z-index:1000;
+    .divPrimo {
+       --bs-gutter-x: 0px !important;
+    }
+    #albumText{
+        font-size: 2.8em;
+    }
 }
 
-.bi-heart{
-    left:250px;
-    top:45px;
+/* classe testo dell'aside */
+.aside-text{
+    font-size: 70%;
 }
 .btn {
     position: relative;
@@ -111,8 +115,11 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
 }
 @media screen and (max-width:576px){
     section .artistDate{
-        top:45px !important;
+        top:135px !important;
         left:0;
+    }
+    div .popular{
+        margin-left:35px !important;
     }
     .likeImg{
         left:30px !important;
@@ -132,8 +139,7 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     .numberAudio1,
     .numberAudio2,.numberAudio3,
     .numberAudio4,.numberAudio5{
-    left:129px !important;
-    
+    margin-left:35px !important;
     }
     .numberAudio1{
         top:630px !important;
@@ -151,7 +157,7 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
         top:935px !important;
     }
     .duration{
-        right:90px !important;
+        left:350px !important;
     }
 }
 @media screen and (max-width:768px) {
@@ -159,23 +165,23 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
         top:120px !important;
     }
     .numberAudio1{
-        left:129px !important;
+        left:81px !important;
         top:630px !important;
     }
     .numberAudio2{
-        left:129px !important;
+        left:81px !important;
         top:705px !important;
     }
     .numberAudio3{
-        left:129px !important;
+        left:81px !important;
         top:780px !important;
     }
     .numberAudio4{
-        left:129px !important;
+        left:81px !important;
         top:855px !important;
     }
     .numberAudio5{
-        left:129px !important;
+        left:81px !important;
         top:933px !important;
     }
     div .track{
@@ -200,7 +206,7 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
 
 @media (min-width: 769px) and (max-width: 992px) {
         .artistDate{
-            top:150px !important;
+            top:100px !important;
         }
         aside{
             display: block !important;
@@ -223,25 +229,25 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
             left:85px !important;
         }
         .numberAudio1{
-            left:298px !important;
-            top:652px !important;
+            left:336px !important;
+            top:709px !important;
         }
         .numberAudio2{
-            left:298px !important;
-            top:730px !important;
+            left:336px !important;
+            top:785px !important;
         }
         .numberAudio3{
-            left:298px !important;
-            top:807px !important;
+            left:336px !important;
+            top:860px !important;
         }
         .numberAudio4{
-            left:298px !important;
-            top:883px !important;
+            left:336px !important;
+            top:935px !important;
         }
 
         .numberAudio5{
-            left:298px !important;
-            top:960px !important;
+            left:336px !important;
+            top:1010px !important;
         }
 
         .duration{
@@ -250,10 +256,10 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     }
 @media (min-width:993px) and (max-width:1200px){
     div .track{
-        top:395px !important;
+        top:415px !important;
     }
     .artistDate{
-        top:137px !important;
+        top:114px !important;
     }
     .likeImg{
         left:70px;
@@ -265,24 +271,24 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
         left:90px !important;
     }
     .numberAudio1{
-        left:333px !important;
-        top:653px !important;
+        left:285px !important;
+        top:709px !important;
     }
     .numberAudio2{
-        left:333px !important;
-        top:730px !important;
+        left:285px !important;
+        top:784px !important;
     }
     .numberAudio3{
-        left:333px !important;
-        top:806px !important;
+        left:285px !important;
+        top:860px !important;
     }
     .numberAudio4{
-        left:333px !important;
-        top:883px !important;
+        left:285px !important;
+        top:938px !important;
     }
     .numberAudio5{
-        left:333px !important;
-        top:959px !important;
+        left:285px !important;
+        top:1012px !important;
     }
     .duration{
         right:220px !important;
@@ -290,7 +296,7 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
 }
 @media (min-width:1201px) and (max-width:1400px){
     .artistDate{
-        top:135px !important;
+        top:110px !important;
     }
     .track{
         top:435px !important;
@@ -306,23 +312,23 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     }
     .numberAudio1{
         left:650px !important;
-        top: 640px !important;
+        top: 685px !important;
     }
     .numberAudio2{
         left:650px !important;
-        top: 715px !important;
+        top: 765px !important;
     }
     .numberAudio3{
         left:650px !important;
-        top: 790px !important;
+        top: 835px !important;
     }
     .numberAudio4{
         left:650px !important;
-        top: 868px !important;
+        top: 915px !important;
     }
     .numberAudio5{
         left:650px !important;
-        top: 946px !important;
+        top: 989px !important;
     }
     .duration{
         right:250px !important;
@@ -330,7 +336,7 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
 }
 @media (min-width:1401px) and (max-width:2000px){
     .artistDate{
-        top:135px !important;
+        top:105px !important;
     }
     .track{
         top:490px !important;
@@ -347,22 +353,72 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     }
     .numberAudio1{
         right:830px !important;
-        top:640px !important;
+        top:685px !important;
     }
     .numberAudio2{
         right:830px !important;
-        top:715px !important;
+        top:765px !important;
     }
     .numberAudio3{
         right:830px !important;
-        top:795px !important;
+        top:840px !important;
     }
     .numberAudio4{
         right:830px !important;
-        top:870px !important;
+        top:910px !important;
     }
     .numberAudio5{
         right:830px !important;
-        top:945px !important;
+        top:988px !important;
+    }
+}
+.aside-text-p {
+ font-size: 70%;
+}
+
+/* modifiche per blocco di pippo na cifra */
+.bi-chevron{
+    font-size: 80%;
+}
+
+.username{
+    font-size: 80%;
+}
+
+/* div canzone principale home */
+@media screen and (max-width: 993px) {
+    #h1Div-index h1{
+        font-size: 150% !important;
+    }
+    #h1Div-index p{
+        font-size: 75%;
+    }
+    .divPrimo {
+        --bs-gutter-x: 0px !important;
+     }
+}
+
+/* immagini delle cards */
+@media screen and (max-width: 768px){
+.altro-cards img{
+    width: 40% !important;
+}
+.divPrimo {
+    --bs-gutter-x: 0px !important;
+ }
+}
+
+@media screen and (min-width: 767px) {
+    .imgCard{
+        width: 25% !important;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .imgCard{
+        width: 100% !important;
+    }
+    .larghezzaCard{
+        width: 25% !important;
     }
 }
