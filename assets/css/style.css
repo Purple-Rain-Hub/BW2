@@ -2,12 +2,33 @@
     box-sizing: border-box;
     color: white;
 }
+
 html,body{
     margin:0;
     padding:0;
     background-color: #171717;
 }
 
+/* COLORI */
+.bg-account{
+    background-color: #0E0E0E;
+}
+
+.bg-Na{
+    background-color: #222222;
+}
+
+.bg-Itp{
+    background-color: #004537;
+}
+
+.bg-play{
+    background-color: #1ED760;
+}
+
+.bg-save{
+    background-color: #0E0E0E;
+}
 
 .bg-autoplay{
     background-color: #2C2C2C;
@@ -15,4 +36,63 @@ html,body{
 
 .bg-cards{
     background-color: #161616;
+}
+
+.bg-startPlayslist{
+   background-color: #1ED760;
+}
+
+.bg-header {
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%) !important; 
+}
+
+.album-size {
+    width: 20%;
+    height: 20%;
+box-shadow: 0 4px 60px rgba(0,0,0,.5);
+}
+.bg-spotify{
+    background-color: #121212;
+}
+
+@media screen and (max-width: 577px) {
+    .bg-dark{
+        background-color: #131313 !important;
+    }
+}
+
+/* classe testo dell'aside */
+.aside-text{
+    font-size: 70%;
+}
+.aside-text-p {
+ font-size: 70%;
+}
+
+/* modifiche per blocco di pippo na cifra */
+.bi-chevron{
+    font-size: 80%;
+}
+
+.username{
+    font-size: 80%;
+}
+
+/* div canzone principale home */
+@media screen and (max-width: 993px) {
+    #h1Div-index h1{
+        font-size: 150% !important;
+    }
+    #h1Div-index p{
+        font-size: 75%;
+    }
+}
+
+/* immagini delle cards */
+@media screen and (max-width: 768px){
+.altro-cards img{
+    width: 40% !important;
+}
 }
