@@ -98,8 +98,8 @@ function printSong(album) {
             songAudio.play();
             totalTime.innerHTML = `${durationTime(randomSongCards.duration)}`
             duration = randomSongCards.duration;
-            
             currentTimer = 0;
+            clearInterval(timer);
             timer = setInterval(function () {
                 if (currentTimer < randomSongCards.duration) {
                     currentTimer++;
