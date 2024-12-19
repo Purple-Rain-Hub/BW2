@@ -91,7 +91,7 @@
             <section>
                 <h4 class="mt-4 fw-bolder fs-2 ms-4 ms-lg-0">Buonasera</h4>
                 <div class="row justify-content-evenly mt-2 gy-3">
-                    <div class="col-lg-4 col-5 p-1">
+                    <div class="col-lg-4 col-5 p-1 songCards">
                         <div class="d-flex align-items-center bg-dark p-0 rounded-2 overflow-hidden">
                             <img src="" style="width: 70px" class="rounded-start-2 songImg" />
                             <div>
@@ -100,7 +100,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-5 p-1">
+                    <div class="col-lg-4 col-5 p-1 songCards">
                         <div class="d-flex align-items-center bg-dark p-0 rounded-2 overflow-hidden">
                             <img src="" style="width: 70px" class="rounded-start-2 songImg" />
                             <div>
@@ -109,7 +109,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-5 p-1">
+                    <div class="col-lg-4 col-5 p-1 songCards">
                         <div class="d-flex align-items-center bg-dark p-0 rounded-2 overflow-hidden">
                             <img src="" style="width: 70px" class="rounded-start-2 songImg" />
                             <div>
@@ -118,7 +118,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-5 p-1">
+                    <div class="col-lg-4 col-5 p-1 songCards">
                         <div class="d-flex align-items-center bg-dark p-0 rounded-2 overflow-hidden">
                             <img src="" style="width: 70px" class="rounded-start-2 songImg " />
                             <div>
@@ -128,7 +128,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-5 p-1">
+                    <div class="col-lg-4 col-5 p-1 songCards">
                         <div class="d-flex align-items-center bg-dark p-0 rounded-2 overflow-hidden">
                             <img src="" style="width: 70px" class="rounded-start-2 songImg" />
                             <div>
@@ -137,7 +137,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-5 p-1">
+                    <div class="col-lg-4 col-5 p-1 songCards">
                         <div class="d-flex align-items-center bg-dark p-0 rounded-2 overflow-hidden">
                             <img src="" style="width: 70px" class="rounded-start-2 songImg" />
                             <div>
@@ -250,10 +250,10 @@
                         <div class="progress-bar rounded-pill bg-white" style="width: 25%"></div>
                     </div>
             <div class="col-lg-3 col-sm-5 d-flex align-items-center ps-lg-0 ps-sm-3 py-3">
-                <img src="assets/imgs/main/image-1.jpg" style="width: 60px;">
+                <img src="assets/imgs/main/image-1.jpg" style="width: 60px;"  id="playerImg">
                 <div class="ms-3">
-                    <h4 class="fs-6 fw-medium m-0">Fat funny friend</h4>
-                    <p style="font-size: smaller;" class="m-0">*nome artista</p>
+                    <h4 class="fs-6 fw-medium m-0" id="playerTitle">Fat funny friend</h4>
+                    <p style="font-size: smaller;" class="m-0" id="playerArtist">*nome artista</p>
                 </div>
                 <button type="button" class="btn align-content-end"><i class="bi bi-heart"></i></button>
             </div>
@@ -261,7 +261,7 @@
                 <div class="d-flex justify-content-center align-items-center d-none d-lg-flex">
                     <button type="button" class="btn"><i class="bi bi-shuffle fs-5"></i></button>
                     <button type="button" class="btn"><i class="bi bi-skip-start-fill fs-4"></i></button>
-                    <button type="button" class="btn"><i class="bi bi-play-circle-fill fs-2"></i></button>
+                    <button type="button" class="btn" id="btnPlay"><i class="bi bi-play-circle-fill fs-2"></i></button>
                     <button type="button" class="btn"><i class="bi bi-skip-end-fill fs-4"></i></button>
                     <button type="button" class="btn"><i class="bi bi-repeat fs-5"></i></button>
                 </div>
@@ -275,9 +275,9 @@
                     <div class="progress w-75 mb-3 mx-2 rounded-pill bg-secondary" role="progressbar"
                         aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
                         style="height: 4px">
-                        <div class="progress-bar rounded-pill bg-white" style="width: 25%"></div>
+                        <div class="progress-bar rounded-pill bg-white" style="width: 0%"></div>
                     </div>
-                    <p id="totalTime">00:00</p>
+                    <p id="totalTime">00:00:00</p>
                 </div>
             </div>
             <div class="col-3 d-none d-lg-flex justify-content-sm-end align-items-center">
