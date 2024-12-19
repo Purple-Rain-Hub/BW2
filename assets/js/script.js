@@ -16,10 +16,12 @@ const albumCards = document.querySelectorAll(".altro-cards")
 const songCards = document.querySelectorAll(".songCards")
 const audio = document.querySelectorAll(".audio");
 let songAudio;
-let isPlaying = false;
+let isPlaying;
 const playerImg = document.getElementById("playerImg");
 const playerTitle = document.getElementById("playerTitle");
 const playerArtist = document.getElementById("playerArtist");
+const btnPlay = document.getElementById("btnPlay");
+const playIcon = document.querySelector("#btnPlay i")
 
 document.addEventListener("load", init());
 
@@ -83,14 +85,14 @@ function printSong(album) {
         songCards[i].addEventListener("click", function () {
             if (songAudio && !songAudio.paused) {
                 songAudio.pause();
-                isPlaying = true;
             }
             playerImg.setAttribute("src", `${randomSongCards.album.cover}`)
             playerTitle.innerHTML = `${randomSongCards.title}`;
             playerArtist.innerHTML = `${randomSongCards.artist.name}`;
             songAudio = new Audio(randomSongCards.preview)
             songAudio.play();
-            isPlaying = false;
+            playIcon.classList.replace("bi-play-circle-fill", "bi-pause-circle-fill")
+            isPlaying = true;
         })
     }
     for (let i = 0; i < albumCards.length; i++) {
@@ -112,11 +114,17 @@ function albumlink(album) {
     }
 }
 
-// function songStart(album) {
-//     for(let i=0; i<songCards.length; i++){
-//         songCards[i].addEventListener("click", function(e){
-//             e.preventDefault;
-//             songCards[i].innerHTML = `<source src="${}" type="audio/mpeg"></source>`
-//         })
-//     }
-// }
+btnPlay.addEventListener("click", function(e){
+    e.preventDefault();
+    if (isPlaying == true){
+        songAudio.pause();
+        playIcon.classList.replace("bi-pause-circle-fill", "bi-play-circle-fill")
+        isPlaying = false
+    }
+    else{
+        songAudio.play()
+        playIcon.classList.replace("bi-play-circle-fill", "bi-pause-circle-fill")
+        isPlaying = true
+    }
+})
+
