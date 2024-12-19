@@ -13,6 +13,10 @@ const albumName = document.querySelectorAll(".albumName")
 const albumArtist = document.querySelectorAll(".albumArtist")
 const albumImg = document.querySelectorAll(".albumImg")
 const albumCards = document.querySelectorAll(".altro-cards")
+const songCards = document.querySelectorAll(".songCards")
+const audio = document.querySelectorAll(".audio");
+let songAudio;
+let isPlaying = false;
 
 document.addEventListener("load", init());
 
@@ -53,7 +57,7 @@ async function getAlbum(usedID) {
         }
         console.log(album);
         printSong(album);
-        albumlink(album)
+        albumlink(album);
     } catch (error) {
         console.error(error);
     }
@@ -61,25 +65,30 @@ async function getAlbum(usedID) {
 
 function printSong(album) {
     const randomSongH1 = album[0].tracks.data[Math.floor(Math.random() * album[0].tracks.data.length)];
-    console.log(randomSongH1.album.cover);
-    console.log(songImgH1);
-    
+
     songImgH1.setAttribute("src", `${randomSongH1.album.cover}`);
     songTitleH1.innerHTML = `${randomSongH1.title}`;
     albumTitleH1.innerHTML = `${randomSongH1.album.title}`;
     artistNameH1.forEach(e => {
         e.innerHTML = `${randomSongH1.artist.name}`;
     });
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < songCards.length; i++) {
         const randomSongCards = album[i + 1].tracks.data[Math.floor(Math.random() * album[i + 1].tracks.data.length)];
-        console.log(randomSongCards.album.cover);
         songImg[i].setAttribute("src", `${randomSongCards.album.cover}`)
         songTitle[i].innerHTML = `${randomSongCards.title}`;
         artistName[i].innerHTML = `${randomSongCards.artist.name}`;
+        songCards[i].addEventListener("click", function () {
+            if (songAudio && !songAudio.paused) {
+                songAudio.pause();
+                isPlaying = true;
+            }
+            songAudio = new Audio(randomSongCards.preview)
+            songAudio.play();
+            isPlaying = false;
+        })
     }
-    for (let i = 0; i < 6; i++) {
-        const randomAlbumCards = album[i+7];
-        console.log(randomAlbumCards);
+    for (let i = 0; i < albumCards.length; i++) {
+        const randomAlbumCards = album[i + 7];
         albumImg[i].setAttribute("src", `${randomAlbumCards.cover}`)
         albumName[i].innerHTML = `${randomAlbumCards.title}`;
         albumArtist[i].innerHTML = `${randomAlbumCards.artist.name}`;
@@ -87,12 +96,21 @@ function printSong(album) {
 }
 
 function albumlink(album) {
-    for(let i=0; i<albumCards.length; i++){
-        albumCards[i].addEventListener("click", function(e){
+    for (let i = 0; i < albumCards.length; i++) {
+        albumCards[i].addEventListener("click", function (e) {
             e.preventDefault;
             sessionStorage.clear;
-            sessionStorage.setItem("idAlbum", JSON.stringify(album[i+7].id));
+            sessionStorage.setItem("idAlbum", JSON.stringify(album[i + 7].id));
             location.href = "album.html";
         })
     }
 }
+
+// function songStart(album) {
+//     for(let i=0; i<songCards.length; i++){
+//         songCards[i].addEventListener("click", function(e){
+//             e.preventDefault;
+//             songCards[i].innerHTML = `<source src="${}" type="audio/mpeg"></source>`
+//         })
+//     }
+// }
