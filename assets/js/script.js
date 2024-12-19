@@ -17,6 +17,9 @@ const songCards = document.querySelectorAll(".songCards")
 const audio = document.querySelectorAll(".audio");
 let songAudio;
 let isPlaying = false;
+const playerImg = document.getElementById("playerImg");
+const playerTitle = document.getElementById("playerTitle");
+const playerArtist = document.getElementById("playerArtist");
 
 document.addEventListener("load", init());
 
@@ -82,6 +85,9 @@ function printSong(album) {
                 songAudio.pause();
                 isPlaying = true;
             }
+            playerImg.setAttribute("src", `${randomSongCards.album.cover}`)
+            playerTitle.innerHTML = `${randomSongCards.title}`;
+            playerArtist.innerHTML = `${randomSongCards.artist.name}`;
             songAudio = new Audio(randomSongCards.preview)
             songAudio.play();
             isPlaying = false;
