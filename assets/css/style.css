@@ -91,8 +91,8 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
 }
 
 /* immagini delle cards */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 769px){
 .altro-cards img{
-    width: 40% !important;
+    width: 20% !important;
 }
 }
