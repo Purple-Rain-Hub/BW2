@@ -90,6 +90,7 @@ function albumlink(album) {
     for(let i=0; i<albumCards.length; i++){
         albumCards[i].addEventListener("click", function(e){
             e.preventDefault;
+            sessionStorage.clear;
             sessionStorage.setItem("idAlbum", JSON.stringify(album[i+7].id));
             location.href = "album.html";
         })
