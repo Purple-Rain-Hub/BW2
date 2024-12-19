@@ -29,7 +29,7 @@ let timer;
 let duration;
 let progressTimer;
 let percentage = 0;
-const progressbar = document.querySelector(".progress-bar");
+const progressbar = document.querySelectorAll(".progress-bar");
 
 document.addEventListener("load", init());
 
@@ -105,9 +105,10 @@ function printSong(album) {
             percentage = 0;
             clearInterval(timer);
             clearInterval(progressTimer);
-            progressTimer = setInterval(function(){
-                let progressPercentage = 25/duration;
-                progressbar.setAttribute("style", `width:${percentage += progressPercentage}%`)
+            progressTimer = setInterval(function () {
+                let progressPercentage = 25 / duration;
+                progressbar[0].setAttribute("style", `width:${percentage += progressPercentage}%`)
+                progressbar[1].setAttribute("style", `width:${percentage += progressPercentage}%`)
             }, 250)
             timer = setInterval(function () {
                 if (currentTimer < randomSongCards.duration) {
@@ -152,9 +153,10 @@ btnPlay.addEventListener("click", function (e) {
             }
             else clearInterval(timer);
         }, 1000);
-        progressTimer = setInterval(function(){
-            let progressPercentage = 100/duration;
-            progressbar.setAttribute("style", `width:${percentage += progressPercentage}%`)
+        progressTimer = setInterval(function () {
+            let progressPercentage = 100 / duration;
+            progressbar[0].setAttribute("style", `width:${percentage += progressPercentage}%`)
+            progressbar[1].setAttribute("style", `width:${percentage += progressPercentage}%`)
         }, 1000)
         isPlaying = true;
     }
