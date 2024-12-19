@@ -21,7 +21,12 @@ const playerImg = document.getElementById("playerImg");
 const playerTitle = document.getElementById("playerTitle");
 const playerArtist = document.getElementById("playerArtist");
 const btnPlay = document.getElementById("btnPlay");
-const playIcon = document.querySelector("#btnPlay i")
+const playIcon = document.querySelector("#btnPlay i");
+const totalTime = document.getElementById("totalTime");
+const currentTime = document.getElementById("currentTime");
+let currentTimer = 0;
+let timer;
+let duration;
 
 document.addEventListener("load", init());
 
@@ -91,6 +96,18 @@ function printSong(album) {
             playerArtist.innerHTML = `${randomSongCards.artist.name}`;
             songAudio = new Audio(randomSongCards.preview)
             songAudio.play();
+            totalTime.innerHTML = `${durationTime(randomSongCards.duration)}`
+            duration = randomSongCards.duration;
+            
+            currentTimer = 0;
+            timer = setInterval(function () {
+                if (currentTimer < randomSongCards.duration) {
+                    currentTimer++;
+                    currentTime.innerHTML = `${durationTime(currentTimer)}`
+                }
+                else clearInterval(timer);
+            }, 1000);
+
             playIcon.classList.replace("bi-play-circle-fill", "bi-pause-circle-fill")
             isPlaying = true;
         })
@@ -114,17 +131,37 @@ function albumlink(album) {
     }
 }
 
-btnPlay.addEventListener("click", function(e){
+btnPlay.addEventListener("click", function (e) {
     e.preventDefault();
-    if (isPlaying == true){
-        songAudio.pause();
-        playIcon.classList.replace("bi-pause-circle-fill", "bi-play-circle-fill")
-        isPlaying = false
-    }
-    else{
+    if (isPlaying == false) {
         songAudio.play()
         playIcon.classList.replace("bi-play-circle-fill", "bi-pause-circle-fill")
-        isPlaying = true
+        timer = setInterval(function () {
+            if (currentTimer < duration) {
+                currentTimer++;
+                currentTime.innerHTML = `${durationTime(currentTimer)}`
+            }
+            else clearInterval(timer);
+        }, 1000);
+        isPlaying = true;
+    }
+    else {
+        songAudio.pause();
+        playIcon.classList.replace("bi-pause-circle-fill", "bi-play-circle-fill")
+        clearInterval(timer);
+        isPlaying = false;
     }
 })
+
+function durationTime(time) {
+    let sec = parseInt(time, 10);
+    let hours = Math.floor(sec / 3600);
+    let minutes = Math.floor((sec - (hours * 3600)) / 60);
+    let seconds = sec - (hours * 3600) - (minutes * 60);
+
+    if (hours < 10) { hours = "0" + hours; }
+    if (minutes < 10) { minutes = "0" + minutes; }
+    if (seconds < 10) { seconds = "0" + seconds; }
+    return hours + ':' + minutes + ':' + seconds;
+}
 
