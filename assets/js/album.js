@@ -55,10 +55,10 @@ function printAlbum(data) {
     minutaggio.innerHTML = `${durationTime(data.duration)}`;
     // stampa canzoni
     for (let i = 0; i < data.tracks.data.length; i++) {
-        ulSongs.innerHTML += `<li class="col-1 text-end">${i + 1}</li>
+        ulSongs.innerHTML += `<li class="col-1 text-end text-gray-light">${i + 1}</li>
                 <li class="col-4">${data.tracks.data[i].title}</li>
-                <li class="col-4">${data.tracks.data[i].rank}</li>
-                <li class="col-3 text-end pe-5">${durationTime(data.tracks.data[i].duration)}</li>`;
+                <li class="col-4 text-gray-light">${data.tracks.data[i].rank}</li>
+                <li class="col-3 text-end pe-5 text-gray-light">${durationTime(data.tracks.data[i].duration)}</li>`;
     }
 }
 

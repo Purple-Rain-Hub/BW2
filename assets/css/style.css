@@ -6,21 +6,28 @@
 html,body{
     margin:0;
     padding:0;
-    background-color: #171717;
 }
 
 
 /* COLORI */
-.bg-account{
-    background-color: #0E0E0E;
+.bg-Playlist{
+    background-color: #2e2e2edb;
 }
 
-.bg-Na{
-    background-color: #222222;
+.bg-spotify{
+    background: linear-gradient(#202020, #121212);
 }
 
-.bg-Itp{
-    background-color: #004537;
+.Freccia{
+    color: #ECEBE9;
+}
+
+.text-gray{
+    color: #808080;
+}
+
+.text-gray-light{
+    color: #b9bcc3;
 }
 
 .bg-play{
@@ -36,11 +43,29 @@ html,body{
 }
 
 .bg-cards{
-    background-color: #161616;
+    background-color: #1f1f1fcd;
+}
+
+.bg-player{
+    background-color: #181818;
 }
 
 .bg-startPlayslist{
    background-color: #1ED760;
+}
+
+.songTitle{
+    font-weight: 700;
+}
+
+.gerardo{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#Artista{
+    font-weight: 800;
 }
 
 .bg-header {
@@ -66,11 +91,7 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
      font-weight: 800;
 }
 
-.bg-spotify{
-    background-color: #121212;
-}
-
-@media screen and (max-width: 577px) {
+@media screen and (max-width: 579px) {
     .bg-dark{
         background-color: #131313 !important;
     }
@@ -79,6 +100,18 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     }
     #albumText{
         font-size: 2.8em;
+    }
+    .pronz{
+        width: 140px !important;
+        height: 20px !important;
+    }
+    .pronz2{
+        width: 400px !important;
+        height: 20px !important;
+    }
+    .pronz3{
+        width: 90px !important;
+        height: 20px !important;
     }
 }
 
@@ -406,6 +439,18 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
 .divPrimo {
     --bs-gutter-x: 0px !important;
  }
+ .pronz{
+    width: 200px !important;
+    height: 20px !important;
+}
+.pronz2{
+    width: 500px !important;
+    height: 20px !important;
+}
+.pronz3{
+    width: 210px !important;
+    height: 20px !important;
+}
 }
 
 @media screen and (min-width: 767px) {
