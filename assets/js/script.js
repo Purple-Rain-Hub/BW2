@@ -27,6 +27,9 @@ const currentTime = document.getElementById("currentTime");
 let currentTimer = 0;
 let timer;
 let duration;
+let progressTimer;
+let percentage = 0;
+const progressbar = document.querySelector(".progress-bar");
 
 document.addEventListener("load", init());
 
@@ -99,7 +102,13 @@ function printSong(album) {
             totalTime.innerHTML = `${durationTime(randomSongCards.duration)}`
             duration = randomSongCards.duration;
             currentTimer = 0;
+            percentage = 0;
             clearInterval(timer);
+            clearInterval(progressTimer);
+            progressTimer = setInterval(function(){
+                let progressPercentage = 25/duration;
+                progressbar.setAttribute("style", `width:${percentage += progressPercentage}%`)
+            }, 250)
             timer = setInterval(function () {
                 if (currentTimer < randomSongCards.duration) {
                     currentTimer++;
@@ -143,12 +152,17 @@ btnPlay.addEventListener("click", function (e) {
             }
             else clearInterval(timer);
         }, 1000);
+        progressTimer = setInterval(function(){
+            let progressPercentage = 100/duration;
+            progressbar.setAttribute("style", `width:${percentage += progressPercentage}%`)
+        }, 1000)
         isPlaying = true;
     }
     else {
         songAudio.pause();
         playIcon.classList.replace("bi-pause-circle-fill", "bi-play-circle-fill")
         clearInterval(timer);
+        clearInterval(progressTimer);
         isPlaying = false;
     }
 })
