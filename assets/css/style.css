@@ -9,6 +9,7 @@ html,body{
     background-color: #171717;
 }
 
+
 /* COLORI */
 .bg-account{
     background-color: #0E0E0E;
@@ -49,10 +50,22 @@ html,body{
 }
 
 .album-size {
-    width: 20%;
-    height: 20%;
+    width: 200px;
+    height: 200px;
 box-shadow: 0 4px 60px rgba(0,0,0,.5);
 }
+
+#albumText {
+    font-size: 4.6em;
+    font-weight: 900;
+}
+
+.scrittaAlbum{
+    font-size: 1em;
+     margin: 0; 
+     font-weight: 800;
+}
+
 .bg-spotify{
     background-color: #121212;
 }
@@ -61,11 +74,303 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     .bg-dark{
         background-color: #131313 !important;
     }
+    .divPrimo {
+       --bs-gutter-x: 0px !important;
+    }
+    #albumText{
+        font-size: 2.8em;
+    }
 }
 
 /* classe testo dell'aside */
 .aside-text{
     font-size: 70%;
+}
+.btn {
+    position: relative;
+}
+.backImage{
+    background-image: url(https://yellowcardrock.com/wp-content/uploads/2016/06/socialsharingbackgroundYELLOWCARD.png);
+    height:30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+.artistDate{
+    left:5px;
+    top:80px;
+}
+.likeTrack{
+    right:35px;
+    top:25px;
+}
+.likeImg{
+    right:250px;
+    top:10px;
+}
+.likeArtist{
+    right:70px;
+    top:45px;
+}
+@media screen and (max-width:576px){
+    section .artistDate{
+        top:135px !important;
+        left:0;
+    }
+    div .popular{
+        margin-left:35px !important;
+    }
+    .likeImg{
+        left:30px !important;
+        top:0px !important;
+
+    }
+    div .track{
+        bottom:380px !important;
+        left:35px !important;
+    }
+    .likeTrack{
+        left:60px !important;
+    }
+    .likeArtist{
+        left:60px !important;
+    }
+    .numberAudio1,
+    .numberAudio2,.numberAudio3,
+    .numberAudio4,.numberAudio5{
+    margin-left:35px !important;
+    }
+    .numberAudio1{
+        top:630px !important;
+    }
+    .numberAudio2{
+        top:705px !important;
+    }
+    .numberAudio3{
+        bottom:15px !important;
+    }
+    .numberAudio4{
+        top:860px !important;
+    }
+    .numberAudio5{
+        top:935px !important;
+    }
+    .duration{
+        left:350px !important;
+    }
+}
+@media screen and (max-width:768px) {
+    .artistDate{
+        top:120px !important;
+    }
+    .numberAudio1{
+        left:81px !important;
+        top:630px !important;
+    }
+    .numberAudio2{
+        left:81px !important;
+        top:705px !important;
+    }
+    .numberAudio3{
+        left:81px !important;
+        top:780px !important;
+    }
+    .numberAudio4{
+        left:81px !important;
+        top:855px !important;
+    }
+    .numberAudio5{
+        left:81px !important;
+        top:933px !important;
+    }
+    div .track{
+        top:370px !important;
+    }
+    .likeImg{
+        left:70px !important;
+        top:0px !important;
+    }
+    .likeArtist{
+        left:100px !important;
+        top:35px !important;
+    }
+    .likeTrack{
+        left:100px !important;
+        top:20px !important;
+    }
+    .duration{
+        right:100px !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+        .artistDate{
+            top:100px !important;
+        }
+        aside{
+            display: block !important;
+            left:0px !important;
+        }
+        .bi-play-circle-fill{
+            display:block !important;
+        }
+        div .track{
+            top:430px !important;
+        }
+        .likeImg{
+            left:67px !important;
+        }
+        .likeArtist{
+            left:85px !important;
+        }
+
+        .likeTrack{
+            left:85px !important;
+        }
+        .numberAudio1{
+            left:336px !important;
+            top:709px !important;
+        }
+        .numberAudio2{
+            left:336px !important;
+            top:785px !important;
+        }
+        .numberAudio3{
+            left:336px !important;
+            top:860px !important;
+        }
+        .numberAudio4{
+            left:336px !important;
+            top:935px !important;
+        }
+
+        .numberAudio5{
+            left:336px !important;
+            top:1010px !important;
+        }
+
+        .duration{
+            right:180px !important;
+        }
+    }
+@media (min-width:993px) and (max-width:1200px){
+    div .track{
+        top:415px !important;
+    }
+    .artistDate{
+        top:114px !important;
+    }
+    .likeImg{
+        left:70px;
+    }
+    .likeArtist{
+        left:90px !important;
+    }
+    .likeTrack{
+        left:90px !important;
+    }
+    .numberAudio1{
+        left:285px !important;
+        top:709px !important;
+    }
+    .numberAudio2{
+        left:285px !important;
+        top:784px !important;
+    }
+    .numberAudio3{
+        left:285px !important;
+        top:860px !important;
+    }
+    .numberAudio4{
+        left:285px !important;
+        top:938px !important;
+    }
+    .numberAudio5{
+        left:285px !important;
+        top:1012px !important;
+    }
+    .duration{
+        right:220px !important;
+    }
+}
+@media (min-width:1201px) and (max-width:1400px){
+    .artistDate{
+        top:110px !important;
+    }
+    .track{
+        top:435px !important;
+    }
+    .likeImg{
+        left:70px !important;
+    }
+    .likeArtist{
+        left:90px !important;
+    }
+    .likeTrack{
+        left:90px !important;
+    }
+    .numberAudio1{
+        left:650px !important;
+        top: 685px !important;
+    }
+    .numberAudio2{
+        left:650px !important;
+        top: 765px !important;
+    }
+    .numberAudio3{
+        left:650px !important;
+        top: 835px !important;
+    }
+    .numberAudio4{
+        left:650px !important;
+        top: 915px !important;
+    }
+    .numberAudio5{
+        left:650px !important;
+        top: 989px !important;
+    }
+    .duration{
+        right:250px !important;
+    }
+}
+@media (min-width:1401px) and (max-width:2000px){
+    .artistDate{
+        top:105px !important;
+    }
+    .track{
+        top:490px !important;
+    }
+    .likeImg{
+        bottom:85px !important;
+        right:300px !important;
+    }
+    .likeTrack{
+        top:20px !important;
+    }
+    .duration{
+        right:430px !important;
+    }
+    .numberAudio1{
+        right:830px !important;
+        top:685px !important;
+    }
+    .numberAudio2{
+        right:830px !important;
+        top:765px !important;
+    }
+    .numberAudio3{
+        right:830px !important;
+        top:840px !important;
+    }
+    .numberAudio4{
+        right:830px !important;
+        top:910px !important;
+    }
+    .numberAudio5{
+        right:830px !important;
+        top:988px !important;
+    }
 }
 .aside-text-p {
  font-size: 70%;
@@ -88,6 +393,9 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     #h1Div-index p{
         font-size: 75%;
     }
+    .divPrimo {
+        --bs-gutter-x: 0px !important;
+     }
 }
 
 /* immagini delle cards */
@@ -95,4 +403,22 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
 .altro-cards img{
     width: 40% !important;
 }
+.divPrimo {
+    --bs-gutter-x: 0px !important;
+ }
+}
+
+@media screen and (min-width: 767px) {
+    .imgCard{
+        width: 25% !important;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .imgCard{
+        width: 100% !important;
+    }
+    .larghezzaCard{
+        width: 25% !important;
+    }
 }
