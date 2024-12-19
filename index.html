@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body class="bg-spotify">
-    <div class="row justify-content-between">
+<body class="bg-spotify divPrimo">
+    <div class="row justify-content-between"  style="width: 100%;">
         <header class="col-lg-3 col-xl-3 bg-black container-fluid d-none d-lg-block">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid d-flex flex-column align-items-baseline px-3">
@@ -68,12 +68,12 @@
                 <div class="col-lg-12 d-flex bg-gradient bg-black p-3 py-4 mt-2">
                     <img src="assets/imgs/main/image-1.jpg" style="width: 12em; height: 12em;" class="songImgH1" />
                     <div class="ms-3" id="h1Div-index">
-                        <h6 style="font-size: 75%" class="albumTitleH1">ALBUM</h6>
-                        <h1 class="fw-bolder m-0 fs-1 songTitleH1">
+                        <h6 style="font-size: 75%" class="albumTitleH1 pronz4 gerardo">ALBUM</h6>
+                        <h1 class="fw-bolder m-0 fs-1 songTitleH1 pronz5 gerardo">
                             *TITOLO SINGOLO*
                         </h1>
-                        <h2 class="fs-6 fw-normal artistNameH1">*artisti della canzona*</h2>
-                        <p class="mt-3">Ascolta il nuovo singolo di <span class="artistNameH1">*artista*</span></p>
+                        <h2 class="fs-6 fw-normal artistNameH1 pronz4 gerardo">*artisti della canzona*</h2>
+                        <p class="mt-3 pronz4 gerardo">Ascolta il nuovo singolo di <span class="artistNameH1">*artista*</span></p>
                         <div>
                             <button type="button" class="btn bg-startPlayslist rounded-pill fw-bold p-xl-2 px-xl-4 p-1 px-3"
                                 style="font-size: 80%">
@@ -114,8 +114,8 @@
                         <div class="d-flex align-items-center bg-Playlist p-0 rounded-2 overflow-hidden">
                             <img src="" style="width: 70px" class="rounded-start-2 songImg" />
                             <div>
-                                <h2 class="fs-6 ms-3 mt-1 mb-0 songTitle">*nome Playlist</h2>
-                                <h6 class="fw-light ms-3 artistName">*artista*</h6>
+                                <h2 class="fs-6 ms-3 mt-1 mb-0 songTitle pronz gerardo">*nome Playlist</h2>
+                                <h6 class="fw-light ms-3 artistName pronz gerardo">*artista*</h6>
                             </div>
                         </div>
                     </div>
@@ -218,7 +218,7 @@
                 <div class="container-fluid p-0 pe-2">
                     <div class="d-flex justify-content-between text-gray-light">
                         <h6 class="m-0 aside-text">Charlie Hookham</h6>
-                        <p class="m-0 aside-text">4 ore</p>
+                        <p class="m-0 aside-text text-gray-light">4 ore</p>
                     </div>
                     <p class="aside-text-p text-gray-light">In Camera - Yumi Zouma <br> <i class="bi bi-disc text-gray-light"></i> EP III</p>
                 </div>
@@ -228,7 +228,7 @@
                 <div class="container-fluid p-0 pe-2">
                     <div class="d-flex justify-content-between text-gray-light">
                         <h6 class="m-0 aside-text">Charlie Hookham</h6>
-                        <p class="m-0 aside-text">4 ore</p>
+                        <p class="m-0 aside-text text-gray-light">4 ore</p>
                     </div>
                     <p class="aside-text-p text-gray-light">In Camera - Yumi Zouma <br> <i class="bi bi-disc text-gray-light"></i> EP III</p>
                 </div>
@@ -238,27 +238,27 @@
                 <div class="container-fluid p-0 pe-2">
                     <div class="d-flex justify-content-between text-gray-light">
                         <h6 class="m-0 aside-text">Charlie Hookham</h6>
-                        <p class="m-0 aside-text">4 ore</p>
+                        <p class="m-0 aside-text text-gray-light">4 ore</p>
                     </div>
                     <p class="aside-text-p text-gray-light">In Camera - Yumi Zouma <br> <i class="bi bi-disc text-gray-light"></i> EP III</p>
                 </div>
             </div>
         </aside>
-        <aside class="row px-lg-5 justify-content-between bg-player position-fixed fixed-bottom z-3">
-            <div class="progress w-100 mb-3 mx-2 rounded-pill bg-secondary d-lg-none" role="progressbar"
-                        aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+        <aside class="row px-lg-6 p-lg-4 justify-content-between bg-player position-fixed fixed-bottom z-3" style="max-width: 100vw;">
+            <div class="divPrimo progress w-100 mb-3 rounded-pill bg-secondary d-lg-none" role="progressbar"
+                        aria-label="Example 0px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
                         style="height: 4px">
-                        <div class="progress-bar rounded-pill bg-white" style="width: 25%"></div>
+                        <div class="progress-bar rounded-pill bg-white" style="width: 10%"></div>
                     </div>
-            <div class="col-lg-3 col-sm-5 d-flex align-items-center ps-lg-0 ps-sm-3 mb-sm-3 py-3">
-                <img src="assets/imgs/main/image-1.jpg" style="width: 60px;"  id="playerImg">
+            <div class="col-lg-3 col-sm-6 d-flex align-items-center ps-lg-0 ps-sm-3 py-3">
+                <img src="assets/imgs/main/image-1.jpg" style="width: 60px;" id="playerImg">
                 <div class="ms-3">
-                    <h4 class="fs-6 fw-medium m-0 pronz3 gerardo">Fat funny friend</h4>
-                    <p style="font-size: smaller;" class="m-0 text-gray pronz3 gerardo">*nome artista</p>
+                    <h4 class="fs-6 fw-medium m-0 pronz3 gerardo" id="playerTitle">Fat funny friend</h4>
+                    <p style="font-size: smaller;" class="m-0 pronz3 gerardo" id="playerArtist">*nome artista</p>
                 </div>
                 <button type="button" class="btn align-content-end"><i class="bi bi-heart"></i></button>
             </div>
-            <div class="col-lg-6 d-flex flex-wrap justify-content-lg-center justify-content-sm-end align-items-center w-50">
+            <div class="col-6 d-flex flex-wrap justify-content-lg-center justify-content-sm-end align-items-center w-50">
                 <div class="d-flex justify-content-center align-items-center d-none d-lg-flex">
                     <button type="button" class="btn"><i class="bi bi-shuffle fs-5"></i></button>
                     <button type="button" class="btn"><i class="bi bi-skip-start-fill fs-4"></i></button>
@@ -266,9 +266,9 @@
                     <button type="button" class="btn"><i class="bi bi-skip-end-fill fs-4"></i></button>
                     <button type="button" class="btn"><i class="bi bi-repeat fs-5"></i></button>
                 </div>
-                <div class="d-flex align-items-center d-lg-none mb-3">
+                <div class="d-flex align-items-center d-lg-none">
                     <button type="button" class="btn"><i class="bi bi-skip-start-fill fs-1"></i></button>
-                    <button type="button" class="btn"><i class="bi bi-play-circle-fill fs-1"></i></button>
+                    <button type="button" class="btn" id="btnPlaypiccolo"><i class="bi bi-play-circle-fill fs-1"></i></button>
                     <button type="button" class="btn"><i class="bi bi-skip-end-fill fs-1"></i></button>
                 </div>
                 <div class="d-flex align-items-center justify-content-center w-75 d-none d-lg-flex">
@@ -281,7 +281,7 @@
                     <p id="totalTime">00:00:00</p>
                 </div>
             </div>
-            <div class="col-lg-3 d-none d-lg-flex justify-content-sm-end align-items-center">
+            <div class="col-3 d-none d-lg-flex justify-content-sm-end align-items-center">
                 <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 16 16"
                     class="Svg-sc-ytk21e-0 dYnaPI" width="18px">
                     <path fill="#ffffff"

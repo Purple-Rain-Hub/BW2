@@ -21,6 +21,8 @@ const playerImg = document.getElementById("playerImg");
 const playerTitle = document.getElementById("playerTitle");
 const playerArtist = document.getElementById("playerArtist");
 const btnPlay = document.getElementById("btnPlay");
+const btnPlay2 = document.getElementById("btnPlaypiccolo");
+const playIcon2 = document.querySelector("#btnPlaypiccolo i"); 
 const playIcon = document.querySelector("#btnPlay i");
 const totalTime = document.getElementById("totalTime");
 const currentTime = document.getElementById("currentTime");
@@ -163,6 +165,34 @@ btnPlay.addEventListener("click", function (e) {
     else {
         songAudio.pause();
         playIcon.classList.replace("bi-pause-circle-fill", "bi-play-circle-fill")
+        clearInterval(timer);
+        clearInterval(progressTimer);
+        isPlaying = false;
+    }
+})
+
+btnPlay2.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (isPlaying == false) {
+        songAudio.play()
+        playIcon2.classList.replace("bi-play-circle-fill", "bi-pause-circle-fill")
+        timer = setInterval(function () {
+            if (currentTimer < duration) {
+                currentTimer++;
+                currentTime.innerHTML = `${durationTime(currentTimer)}`
+            }
+            else clearInterval(timer);
+        }, 1000);
+        progressTimer = setInterval(function () {
+            let progressPercentage = 100 / duration;
+            progressbar[0].setAttribute("style", `width:${percentage += progressPercentage}%`)
+            progressbar[1].setAttribute("style", `width:${percentage += progressPercentage}%`)
+        }, 1000)
+        isPlaying = true;
+    }
+    else {
+        songAudio.pause();
+        playIcon2.classList.replace("bi-pause-circle-fill", "bi-play-circle-fill")
         clearInterval(timer);
         clearInterval(progressTimer);
         isPlaying = false;
