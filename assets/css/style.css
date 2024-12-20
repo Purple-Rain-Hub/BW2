@@ -1,7 +1,6 @@
 *{
     box-sizing: border-box;
     color: white;
-    max-width: 100%;
 }
 
 html,body{
@@ -92,29 +91,6 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
      font-weight: 800;
 }
 
-@media screen and (max-width: 579px) {
-    .bg-dark{
-        background-color: #131313 !important;
-    }
-    .divPrimo {
-       --bs-gutter-x: 0px !important;
-    }
-    #albumText{
-        font-size: 2.8em;
-    }
-    .pronz{
-        width: 140px !important;
-        height: 20px !important;
-    }
-    .pronz2{
-        width: 400px !important;
-        height: 20px !important;
-    }
-    .pronz3{
-        width: 150px !important;
-        height: 20px !important;
-    }
-}
 
 /* classe testo dell'aside */
 .aside-text{
@@ -130,8 +106,6 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    
-
 }
 .artist{
     position: absolute;
@@ -158,20 +132,50 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     font-size: 80%;
 }
 
-/* div canzone principale home */
-@media screen and (max-width: 993px) {
-    #h1Div-index h1{
-        font-size: 150% !important;
-    }
-    #h1Div-index p{
-        font-size: 75%;
+/* sezione @media query */
+
+@media screen and (max-width: 579px) {
+    .bg-dark{
+        background-color: #131313 !important;
     }
     .divPrimo {
-        --bs-gutter-x: 0px !important;
-     }
+       --bs-gutter-x: 0px !important;
+    }
+    #albumText{
+        font-size: 2.8em;
+    }
+       /* pagina home */
+    .pronz{
+        width: 140px !important;
+        height: 20px !important;
+    }
+    .pronz2{
+        width: 400px !important;
+        height: 20px !important;
+    }
+    .pronz3{
+        width: 150px !important;
+        height: 20px !important;
+    }
+/* pagina album */
+    .pronz-album-5{
+        width: 290px;
+        height: 60px;
+    }
+    .pronz-album-4{
+        width: 290px;
+        height: 25px;
+    }
+    .pronz-album-2{
+        height: 25px;
+    }
+    /* pagina artist */
+    .pronz-artist-5{
+        width: 550px;
+        height: 85px;
+    }
 }
 
-/* immagini delle cards */
 @media screen and (max-width: 769px){
 .altro-cards img{
     width: 20% !important;
@@ -185,6 +189,7 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     .imgCard{
         width: 25% !important;
     }
+       /* pagina home */
 .pronz{
    width: 200px !important;
    height: 20px !important;
@@ -197,10 +202,26 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
    width: 210px !important;
    height: 20px !important;
 }
-
+/* pagina album */
+.pronz-album-5{
+    width: 490px;
+    height: 95px;
+}
+.pronz-album-4{
+    width: 490px;
+    height: 25px;
+}
+.pronz-album-2{
+    width: 220px;
+    height: 25px;
+}
+/* pagina artist */
+.pronz-artist-5{
+    width: 560px;
+    height: 85px;
 }
 
-
+}
 
 @media screen and (min-width: 991px) {
     .imgCard{
@@ -209,6 +230,7 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     .larghezzaCard{
         width: 25% !important;
     }
+    /* pagina home */
     .pronz{
         width: 50px !important;
         height: 20px !important;
@@ -229,9 +251,40 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
         width: 230px !important;
         height: 50px !important;
      }
+/* pagina album */
+     .pronz-album-5{
+        width: 465px;
+        height: 95px;
+    }
+    .pronz-album-4{
+        width: 465px;
+        height: 25px;
+    }
+    .pronz-album-2{
+        width: 135px;
+        height: 25px;
+    }
+    /* pagina artist */
+.pronz-artist-5{
+    width: 580px;
+    height: 85px;
+}
+}
+
+@media screen and (max-width: 993px) {
+    #h1Div-index h1{
+        font-size: 150% !important;
+    }
+    #h1Div-index p{
+        font-size: 85%;
+    }
+    .divPrimo {
+        --bs-gutter-x: 0px !important;
+     }
 }
 
 @media screen and (min-width: 1199px) {
+       /* pagina home */
     .pronz{
         width: 100px !important;
         height: 20px !important;
@@ -252,9 +305,28 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
         width: 380px !important;
         height: 50px !important;
      }
+     /* pagina album */
+     .pronz-album-5{
+        width: 550px;
+        height: 95px;
+    }
+    .pronz-album-4{
+        width: 550px;
+        height: 25px;
+    }
+    .pronz-album-2{
+        width: 145px;
+        height: 25px;
+    }
+        /* pagina artist */
+.pronz-artist-5{
+    width: 620px;
+    height: 85px;
+}
 }
 
 @media screen and (min-width: 1399px) {
+       /* pagina home */
     .pronz{
         width: 230px !important;
         height: 20px !important;
@@ -275,9 +347,28 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
         width: 480px !important;
         height: 50px !important;
      }
+     /* pagina album */
+     .pronz-album-5{
+        width: 677px;
+        height: 95px;
+    }
+    .pronz-album-4{
+        width: 677px;
+        height: 25px;
+    }
+    .pronz-album-2{
+        width: 190px;
+        height: 25px;
+    }
+        /* pagina artist */
+.pronz-artist-5{
+    width: 700px;
+    height: 85px;
+}
 }
 
 @media screen and (min-width: 1800px) {
+       /* pagina home */
     .pronz{
         width: 220px !important;
         height: 20px !important;
@@ -298,4 +389,22 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
         width: 600px !important;
         height: 50px !important;
      }
+     /* pagina album */
+     .pronz-album-5{
+        width: 768px;
+        height: 95px;
+    }
+    .pronz-album-4{
+        width: 768px;
+        height: 25px;
+    }
+    .pronz-album-2{
+        width: 255px;
+        height: 25px;
+    }
+        /* pagina artist */
+.pronz-artist-5{
+    width: 700px;
+    height: 85px;
+}
 }
