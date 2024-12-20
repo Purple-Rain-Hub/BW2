@@ -1,3 +1,5 @@
+// let someValues = 1;
+// export {someValues};
 const urlAlbum = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 const usedID = [];
 const album = [];
@@ -32,6 +34,7 @@ let duration;
 let progressTimer;
 let percentage = 0;
 const progressbar = document.querySelectorAll(".progress-bar");
+
 
 document.addEventListener("load", init());
 
@@ -210,4 +213,17 @@ function durationTime(time) {
     if (seconds < 10) { seconds = "0" + seconds; }
     return hours + ':' + minutes + ':' + seconds;
 }
+
+const toggle = document.getElementById("search-toggle");
+const searchBar = document.getElementById("search-bar");
+
+
+toggle.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (searchBar.classList.contains("d-none")) {
+      searchBar.classList.remove("d-none");
+    } else {
+      searchBar.classList.add("d-none");
+    }
+  });
 
