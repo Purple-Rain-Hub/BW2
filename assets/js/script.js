@@ -216,6 +216,7 @@ function durationTime(time) {
 
 const toggle = document.getElementById("search-toggle");
 const searchBar = document.getElementById("search-bar");
+const input = document.getElementById("search-input");
 
 
 toggle.addEventListener("click", function (event) {
