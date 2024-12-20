@@ -32,6 +32,7 @@ let duration;
 let progressTimer;
 let percentage = 0;
 const progressbar = document.querySelectorAll(".progress-bar");
+const volumeBar = document.querySelector(".volume-bar");
 
 
 document.addEventListener("load", init());
@@ -103,6 +104,7 @@ function printSong(album) {
             playerArtist.innerHTML = `${randomSongCards.artist.name}`;
             songAudio = new Audio(randomSongCards.preview)
             songAudio.play();
+            songAudio.volume = volumeBar.value;
             totalTime.innerHTML = `${durationTime(randomSongCards.duration)}`
             duration = randomSongCards.duration;
             currentTimer = 0;
@@ -251,3 +253,9 @@ btnGrande.addEventListener("click", function (e) {
     playIcon.classList.replace("bi-play-circle-fill", "bi-pause-circle-fill")
     isPlaying = true;
 })
+
+volumeBar.addEventListener("input", function () {
+    if (songAudio) {
+        songAudio.volume = volumeBar.value;
+    }
+});
