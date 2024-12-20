@@ -74,8 +74,8 @@ function printSong(album) {
         songList.innerHTML += `<div class="d-flex songCards">
           <img src="${randomSongCards.album.cover}" style="width: 50px; height: 50px;" class="songImg">
           <div class="ms-2">
-            <p class="h5 p-0 m-0 songTitle" >${randomSongCards.title}</p>
-            <p class="text-gray artistName">${randomSongCards.artist.name}</p>
+            <p class="h5 p-0 m-0 songTitle gerardo pronz-search" >${randomSongCards.title}</p>
+            <p class="text-gray artistName gerardo pronz-search">${randomSongCards.artist.name}</p>
           </div>
         </div>`
     }
