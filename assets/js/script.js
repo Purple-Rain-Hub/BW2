@@ -1,5 +1,3 @@
-// let someValues = 1;
-// export {someValues};
 const urlAlbum = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 const usedID = [];
 const album = [];
@@ -228,3 +226,6 @@ toggle.addEventListener("click", function (event) {
     }
   });
 
+input.addEventListener("keydown", function(e){
+e
+})
