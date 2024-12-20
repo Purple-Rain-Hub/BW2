@@ -1,20 +1,7 @@
 const urlAlbum = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 const usedID = [];
 const album = [];
-const songTitle = document.querySelectorAll(".songTitle");
-const artistName = document.querySelectorAll(".artistName");
-const albumTitle = document.querySelectorAll(".albumTitle");
-const songImg = document.querySelectorAll(".songImg")
-const songImgH1 = document.querySelector(".songImgH1")
-const songTitleH1 = document.querySelector(".songTitleH1");
-const albumTitleH1 = document.querySelector(".albumTitleH1");
-const artistNameH1 = document.querySelectorAll(".artistNameH1");
-const albumName = document.querySelectorAll(".albumName")
-const albumArtist = document.querySelectorAll(".albumArtist")
-const albumImg = document.querySelectorAll(".albumImg")
-const albumCards = document.querySelectorAll(".altro-cards")
-const songCards = document.querySelectorAll(".songCards")
-const audio = document.querySelectorAll(".audio");
+const songList = document.getElementById("songList");
 let songAudio;
 let isPlaying;
 const playerImg = document.getElementById("playerImg");
@@ -22,7 +9,7 @@ const playerTitle = document.getElementById("playerTitle");
 const playerArtist = document.getElementById("playerArtist");
 const btnPlay = document.getElementById("btnPlay");
 const btnPlay2 = document.getElementById("btnPlaypiccolo");
-const playIcon2 = document.querySelector("#btnPlaypiccolo i"); 
+const playIcon2 = document.querySelector("#btnPlaypiccolo i");
 const playIcon = document.querySelector("#btnPlay i");
 const totalTime = document.getElementById("totalTime");
 const currentTime = document.getElementById("currentTime");
@@ -32,7 +19,9 @@ let duration;
 let progressTimer;
 let percentage = 0;
 const progressbar = document.querySelectorAll(".progress-bar");
-
+const searchbar = document.getElementById("searchbar");
+const form = document.getElementById("form");
+const volumeBar = document.querySelector(".volume-bar");
 
 document.addEventListener("load", init());
 
@@ -41,7 +30,7 @@ function init() {
 }
 
 function randomID() {
-    for (let i = 0; i < 13; i++) {
+    for (let i = 0; i < 10; i++) {
         let randomNum = Math.floor(Math.random() * 80);
         let ID = 756200 + randomNum;
         if (usedID.includes(ID)) {
@@ -57,7 +46,7 @@ function randomID() {
 
 async function getAlbum(usedID) {
     try {
-        for (let i = 0; i < 13; i++) {
+        for (let i = 0; i < 10; i++) {
             const response = await fetch(urlAlbum + usedID[i])
             if (response.ok) {
                 const data = await response.json();
@@ -73,27 +62,26 @@ async function getAlbum(usedID) {
         }
         console.log(album);
         printSong(album);
-        albumlink(album);
     } catch (error) {
         console.error(error);
     }
 }
 
 function printSong(album) {
-    puzzo=Math.floor(Math.random() * album[0].tracks.data.length);
-    const randomSongH1 = album[0].tracks.data[puzzo];
-
-    songImgH1.setAttribute("src", `${randomSongH1.album.cover}`);
-    songTitleH1.innerHTML = `${randomSongH1.title}`;
-    albumTitleH1.innerHTML = `${randomSongH1.album.title}`;
-    artistNameH1.forEach(e => {
-        e.innerHTML = `${randomSongH1.artist.name}`;
-        });
-    for (let i = 0; i < songCards.length; i++) {
-        const randomSongCards = album[i + 1].tracks.data[Math.floor(Math.random() * album[i + 1].tracks.data.length)];
-        songImg[i].setAttribute("src", `${randomSongCards.album.cover}`)
-        songTitle[i].innerHTML = `${randomSongCards.title}`;
-        artistName[i].innerHTML = `${randomSongCards.artist.name}`;
+    console.log(album);
+    for (let i = 0; i < 10; i++) {
+        const randomSongCards = album[i].tracks.data[Math.floor(Math.random() * album[i].tracks.data.length)];
+        songList.innerHTML += `<div class="d-flex songCards">
+          <img src="${randomSongCards.album.cover}" style="width: 50px; height: 50px;" class="songImg">
+          <div class="ms-2">
+            <p class="h5 p-0 m-0 songTitle" >${randomSongCards.title}</p>
+            <p class="text-gray artistName">${randomSongCards.artist.name}</p>
+          </div>
+        </div>`
+    }
+    const songCards = document.querySelectorAll(".songCards");
+    for (let i = 0; i < 10; i++) {
+        const randomSongCards = album[i].tracks.data[Math.floor(Math.random() * album[i].tracks.data.length)];
         songCards[i].addEventListener("click", function () {
             if (songAudio && !songAudio.paused) {
                 songAudio.pause();
@@ -103,6 +91,7 @@ function printSong(album) {
             playerArtist.innerHTML = `${randomSongCards.artist.name}`;
             songAudio = new Audio(randomSongCards.preview)
             songAudio.play();
+            songAudio.volume = volumeBar.value;
             totalTime.innerHTML = `${durationTime(randomSongCards.duration)}`
             duration = randomSongCards.duration;
             currentTimer = 0;
@@ -126,21 +115,68 @@ function printSong(album) {
             isPlaying = true;
         })
     }
-    for (let i = 0; i < albumCards.length; i++) {
-        const randomAlbumCards = album[i + 7];
-        albumImg[i].setAttribute("src", `${randomAlbumCards.cover}`)
-        albumName[i].innerHTML = `${randomAlbumCards.title}`;
-        albumArtist[i].innerHTML = `${randomAlbumCards.artist.name}`;
+}
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const searchValue = searchbar.value;
+    getSearch(searchValue);
+})
+
+async function getSearch(searchValue) {
+    try {
+        const response = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=" + searchValue)
+        if (response.ok) {
+            const data = await response.json();
+            printSearch(data.data);
+        }
+        else console.log(error);
+    } catch (error) {
+        console.error(error);
     }
 }
 
-function albumlink(album) {
-    for (let i = 0; i < albumCards.length; i++) {
-        albumCards[i].addEventListener("click", function (e) {
-            e.preventDefault;
-            sessionStorage.clear;
-            sessionStorage.setItem("idAlbum", JSON.stringify(album[i + 7].id));
-            location.href = "album.html";
+function printSearch(data) {
+    const artistName = document.querySelectorAll(".artistName");
+    const songTitle = document.querySelectorAll(".songTitle");
+    const songImg = document.querySelectorAll(".songImg");
+    const songCards = document.querySelectorAll(".songCards");
+    for (let i = 0; i < 10; i++) {
+        artistName[i].innerHTML = data[i].artist.name;
+        songTitle[i].innerHTML = data[i].title;
+        songImg[i].src = data[i].album.cover
+
+        songCards[i].addEventListener("click", function () {
+            if (songAudio && !songAudio.paused) {
+                songAudio.pause();
+            }
+            playerImg.setAttribute("src", `${data[i].album.cover}`)
+            playerTitle.innerHTML = `${data[i].title}`;
+            playerArtist.innerHTML = `${data[i].artist.name}`;
+            songAudio = new Audio(data[i].preview)
+            songAudio.play();
+            songAudio.volume = volumeBar.value;
+            totalTime.innerHTML = `${durationTime(data[i].duration)}`
+            duration = data[i].duration;
+            currentTimer = 0;
+            percentage = 0;
+            clearInterval(timer);
+            clearInterval(progressTimer);
+            progressTimer = setInterval(function () {
+                let progressPercentage = 25 / duration;
+                progressbar[0].setAttribute("style", `width:${percentage += progressPercentage}%`)
+                progressbar[1].setAttribute("style", `width:${percentage += progressPercentage}%`)
+            }, 250)
+            timer = setInterval(function () {
+                if (currentTimer < data[i].duration) {
+                    currentTimer++;
+                    currentTime.innerHTML = `${durationTime(currentTimer)}`
+                }
+                else clearInterval(timer);
+            }, 1000);
+
+            playIcon.classList.replace("bi-play-circle-fill", "bi-pause-circle-fill")
+            isPlaying = true;
         })
     }
 }
@@ -213,41 +249,8 @@ function durationTime(time) {
     return hours + ':' + minutes + ':' + seconds;
 }
 
-
-const btnGrande = document.getElementById("btnGrande");
-let puzzo;
-console.log(album);
-
-btnGrande.addEventListener("click", function (e) {
-    e.preventDefault()
-    const randomSongH1 = album[0].tracks.data[puzzo];
-    if (songAudio && !songAudio.paused) {
-        songAudio.pause();
+volumeBar.addEventListener("input", function () {
+    if (songAudio) {
+        songAudio.volume = volumeBar.value;
     }
-    playerImg.setAttribute("src", `${randomSongH1.album.cover}`)
-    playerTitle.innerHTML = `${randomSongH1.title}`;
-    playerArtist.innerHTML = `${randomSongH1.artist.name}`;
-    songAudio = new Audio(randomSongH1.preview)
-    songAudio.play();
-    totalTime.innerHTML = `${durationTime(randomSongH1.duration)}`
-    duration = randomSongH1.duration;
-    currentTimer = 0;
-    percentage = 0;
-    clearInterval(timer);
-    clearInterval(progressTimer);
-    progressTimer = setInterval(function () {
-        let progressPercentage = 25 / duration;
-        progressbar[0].setAttribute("style", `width:${percentage += progressPercentage}%`)
-        progressbar[1].setAttribute("style", `width:${percentage += progressPercentage}%`)
-    }, 250)
-    timer = setInterval(function () {
-        if (currentTimer < randomSongCards.duration) {
-            currentTimer++;
-            currentTime.innerHTML = `${durationTime(currentTimer)}`
-        }
-        else clearInterval(timer);
-    }, 1000);
-
-    playIcon.classList.replace("bi-play-circle-fill", "bi-pause-circle-fill")
-    isPlaying = true;
-})
+});

@@ -91,29 +91,6 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
      font-weight: 800;
 }
 
-@media screen and (max-width: 579px) {
-    .bg-dark{
-        background-color: #131313 !important;
-    }
-    .divPrimo {
-       --bs-gutter-x: 0px !important;
-    }
-    #albumText{
-        font-size: 2.8em;
-    }
-    .pronz{
-        width: 140px !important;
-        height: 20px !important;
-    }
-    .pronz2{
-        width: 400px !important;
-        height: 20px !important;
-    }
-    .pronz3{
-        width: 150px !important;
-        height: 20px !important;
-    }
-}
 
 /* classe testo dell'aside */
 .aside-text{
@@ -123,288 +100,25 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     position: relative;
 }
 .backImage{
+    position: relative;
     background-image: url(https://yellowcardrock.com/wp-content/uploads/2016/06/socialsharingbackgroundYELLOWCARD.png);
-    height:30%;
+    height:370px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-
 }
-.artistDate{
-    left:5px;
-    top:80px;
+.artist{
+    position: absolute;
+    bottom:-10px;
+    margin-left: 20px;
 }
-.likeTrack{
-    right:35px;
-    top:25px;
-}
-.likeImg{
-    right:250px;
-    top:10px;
-}
-.likeArtist{
-    right:70px;
-    top:45px;
-}
-/* @media screen and (max-width:576px){
-    section .artistDate{
-        top:135px !important;
-        left:0;
-    }
-    div .popular{
-        margin-left:35px !important;
-    }
-    .likeImg{
-        left:30px !important;
-        top:0px !important;
-
-    }
-    div .track{
-        bottom:380px !important;
-        left:35px !important;
-    }
-    .likeTrack{
-        left:60px !important;
-    }
-    .likeArtist{
-        left:60px !important;
-    }
-    .numberAudio1,
-    .numberAudio2,.numberAudio3,
-    .numberAudio4,.numberAudio5{
-    margin-left:35px !important;
-    }
-    .numberAudio1{
-        top:630px !important;
-    }
-    .numberAudio2{
-        top:705px !important;
-    }
-    .numberAudio3{
-        bottom:15px !important;
-    }
-    .numberAudio4{
-        top:860px !important;
-    }
-    .numberAudio5{
-        top:935px !important;
-    }
-    .duration{
-        left:350px !important;
-    }
-}
-@media screen and (max-width:768px) {
-    .artistDate{
-        top:120px !important;
-    }
-    .numberAudio1{
-        left:81px !important;
-        top:630px !important;
-    }
-    .numberAudio2{
-        left:81px !important;
-        top:705px !important;
-    }
-    .numberAudio3{
-        left:81px !important;
-        top:780px !important;
-    }
-    .numberAudio4{
-        left:81px !important;
-        top:855px !important;
-    }
-    .numberAudio5{
-        left:81px !important;
-        top:933px !important;
-    }
-    div .track{
-        top:370px !important;
-    }
-    .likeImg{
-        left:70px !important;
-        top:0px !important;
-    }
-    .likeArtist{
-        left:100px !important;
-        top:35px !important;
-    }
-    .likeTrack{
-        left:100px !important;
-        top:20px !important;
-    }
-    .duration{
-        right:100px !important;
-    }
+.song-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
-@media (min-width: 769px) and (max-width: 992px) {
-        .artistDate{
-            top:100px !important;
-        }
-        aside{
-            display: block !important;
-            left:0px !important;
-        }
-        .bi-play-circle-fill{
-            display:block !important;
-        }
-        div .track{
-            top:430px !important;
-        }
-        .likeImg{
-            left:67px !important;
-        }
-        .likeArtist{
-            left:85px !important;
-        }
-
-        .likeTrack{
-            left:85px !important;
-        }
-        .numberAudio1{
-            left:336px !important;
-            top:709px !important;
-        }
-        .numberAudio2{
-            left:336px !important;
-            top:785px !important;
-        }
-        .numberAudio3{
-            left:336px !important;
-            top:860px !important;
-        }
-        .numberAudio4{
-            left:336px !important;
-            top:935px !important;
-        }
-
-        .numberAudio5{
-            left:336px !important;
-            top:1010px !important;
-        }
-
-        .duration{
-            right:180px !important;
-        }
-    }
-@media (min-width:993px) and (max-width:1200px){
-    div .track{
-        top:415px !important;
-    }
-    .artistDate{
-        top:114px !important;
-    }
-    .likeImg{
-        left:70px;
-    }
-    .likeArtist{
-        left:90px !important;
-    }
-    .likeTrack{
-        left:90px !important;
-    }
-    .numberAudio1{
-        left:285px !important;
-        top:709px !important;
-    }
-    .numberAudio2{
-        left:285px !important;
-        top:784px !important;
-    }
-    .numberAudio3{
-        left:285px !important;
-        top:860px !important;
-    }
-    .numberAudio4{
-        left:285px !important;
-        top:938px !important;
-    }
-    .numberAudio5{
-        left:285px !important;
-        top:1012px !important;
-    }
-    .duration{
-        right:220px !important;
-    }
-}
-@media (min-width:1201px) and (max-width:1400px){
-    .artistDate{
-        top:110px !important;
-    }
-    .track{
-        top:435px !important;
-    }
-    .likeImg{
-        left:70px !important;
-    }
-    .likeArtist{
-        left:90px !important;
-    }
-    .likeTrack{
-        left:90px !important;
-    }
-    .numberAudio1{
-        left:650px !important;
-        top: 685px !important;
-    }
-    .numberAudio2{
-        left:650px !important;
-        top: 765px !important;
-    }
-    .numberAudio3{
-        left:650px !important;
-        top: 835px !important;
-    }
-    .numberAudio4{
-        left:650px !important;
-        top: 915px !important;
-    }
-    .numberAudio5{
-        left:650px !important;
-        top: 989px !important;
-    }
-    .duration{
-        right:250px !important;
-    }
-}
-@media (min-width:1401px) and (max-width:2000px){
-    .artistDate{
-        top:105px !important;
-    }
-    .track{
-        top:490px !important;
-    }
-    .likeImg{
-        bottom:85px !important;
-        right:300px !important;
-    }
-    .likeTrack{
-        top:20px !important;
-    }
-    .duration{
-        right:430px !important;
-    }
-    .numberAudio1{
-        right:830px !important;
-        top:685px !important;
-    }
-    .numberAudio2{
-        right:830px !important;
-        top:765px !important;
-    }
-    .numberAudio3{
-        right:830px !important;
-        top:840px !important;
-    }
-    .numberAudio4{
-        right:830px !important;
-        top:910px !important;
-    }
-    .numberAudio5{
-        right:830px !important;
-        top:988px !important;
-    }
-} */
 .aside-text-p {
  font-size: 70%;
 }
@@ -418,20 +132,50 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     font-size: 80%;
 }
 
-/* div canzone principale home */
-@media screen and (max-width: 993px) {
-    #h1Div-index h1{
-        font-size: 150% !important;
-    }
-    #h1Div-index p{
-        font-size: 75%;
+/* sezione @media query */
+
+@media screen and (max-width: 579px) {
+    .bg-dark{
+        background-color: #131313 !important;
     }
     .divPrimo {
-        --bs-gutter-x: 0px !important;
-     }
+       --bs-gutter-x: 0px !important;
+    }
+    #albumText{
+        font-size: 2.8em;
+    }
+       /* pagina home */
+    .pronz{
+        width: 140px !important;
+        height: 20px !important;
+    }
+    .pronz2{
+        width: 400px !important;
+        height: 20px !important;
+    }
+    .pronz3{
+        width: 150px !important;
+        height: 20px !important;
+    }
+/* pagina album */
+    .pronz-album-5{
+        width: 290px;
+        height: 60px;
+    }
+    .pronz-album-4{
+        width: 290px;
+        height: 25px;
+    }
+    .pronz-album-2{
+        height: 25px;
+    }
+    /* pagina artist */
+    .pronz-artist-5{
+        width: 550px;
+        height: 85px;
+    }
 }
 
-/* immagini delle cards */
 @media screen and (max-width: 769px){
 .altro-cards img{
     width: 20% !important;
@@ -445,6 +189,7 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     .imgCard{
         width: 25% !important;
     }
+       /* pagina home */
 .pronz{
    width: 200px !important;
    height: 20px !important;
@@ -457,10 +202,26 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
    width: 210px !important;
    height: 20px !important;
 }
-
+/* pagina album */
+.pronz-album-5{
+    width: 490px;
+    height: 95px;
+}
+.pronz-album-4{
+    width: 490px;
+    height: 25px;
+}
+.pronz-album-2{
+    width: 220px;
+    height: 25px;
+}
+/* pagina artist */
+.pronz-artist-5{
+    width: 560px;
+    height: 85px;
 }
 
-
+}
 
 @media screen and (min-width: 991px) {
     .imgCard{
@@ -469,6 +230,7 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
     .larghezzaCard{
         width: 25% !important;
     }
+    /* pagina home */
     .pronz{
         width: 50px !important;
         height: 20px !important;
@@ -489,9 +251,40 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
         width: 230px !important;
         height: 50px !important;
      }
+/* pagina album */
+     .pronz-album-5{
+        width: 465px;
+        height: 95px;
+    }
+    .pronz-album-4{
+        width: 465px;
+        height: 25px;
+    }
+    .pronz-album-2{
+        width: 135px;
+        height: 25px;
+    }
+    /* pagina artist */
+.pronz-artist-5{
+    width: 580px;
+    height: 85px;
+}
+}
+
+@media screen and (max-width: 993px) {
+    #h1Div-index h1{
+        font-size: 150% !important;
+    }
+    #h1Div-index p{
+        font-size: 85%;
+    }
+    .divPrimo {
+        --bs-gutter-x: 0px !important;
+     }
 }
 
 @media screen and (min-width: 1199px) {
+       /* pagina home */
     .pronz{
         width: 100px !important;
         height: 20px !important;
@@ -512,11 +305,30 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
         width: 380px !important;
         height: 50px !important;
      }
+     /* pagina album */
+     .pronz-album-5{
+        width: 550px;
+        height: 95px;
+    }
+    .pronz-album-4{
+        width: 550px;
+        height: 25px;
+    }
+    .pronz-album-2{
+        width: 145px;
+        height: 25px;
+    }
+        /* pagina artist */
+.pronz-artist-5{
+    width: 620px;
+    height: 85px;
+}
 }
 
 @media screen and (min-width: 1399px) {
+       /* pagina home */
     .pronz{
-        width: 140px !important;
+        width: 230px !important;
         height: 20px !important;
      }
      .pronz2{
@@ -535,4 +347,64 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
         width: 480px !important;
         height: 50px !important;
      }
+     /* pagina album */
+     .pronz-album-5{
+        width: 677px;
+        height: 95px;
+    }
+    .pronz-album-4{
+        width: 677px;
+        height: 25px;
+    }
+    .pronz-album-2{
+        width: 190px;
+        height: 25px;
+    }
+        /* pagina artist */
+.pronz-artist-5{
+    width: 700px;
+    height: 85px;
+}
+}
+
+@media screen and (min-width: 1800px) {
+       /* pagina home */
+    .pronz{
+        width: 220px !important;
+        height: 20px !important;
+     }
+     .pronz2{
+        width: 145px !important;
+        height: 20px !important;
+     }
+     .pronz3{
+        width: 340px !important;
+        height: 20px !important;
+     }
+     .pronz4{
+        width: 600px !important;
+        height: 20px !important;
+     }
+     .pronz5{
+        width: 600px !important;
+        height: 50px !important;
+     }
+     /* pagina album */
+     .pronz-album-5{
+        width: 768px;
+        height: 95px;
+    }
+    .pronz-album-4{
+        width: 768px;
+        height: 25px;
+    }
+    .pronz-album-2{
+        width: 255px;
+        height: 25px;
+    }
+        /* pagina artist */
+.pronz-artist-5{
+    width: 700px;
+    height: 85px;
+}
 }
