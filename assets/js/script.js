@@ -212,20 +212,17 @@ function durationTime(time) {
     return hours + ':' + minutes + ':' + seconds;
 }
 
-const toggle = document.getElementById("search-toggle");
-const searchBar = document.getElementById("search-bar");
-const input = document.getElementById("search-input");
+// const toggle = document.getElementById("search-toggle");
+// const searchBar = document.getElementById("search-bar");
+// const input = document.getElementById("search-input");
 
 
-toggle.addEventListener("click", function (event) {
-    event.preventDefault();
-    if (searchBar.classList.contains("d-none")) {
-      searchBar.classList.remove("d-none");
-    } else {
-      searchBar.classList.add("d-none");
-    }
-  });
+// toggle.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     if (searchBar.classList.contains("d-none")) {
+//       searchBar.classList.remove("d-none");
+//     } else {
+//       searchBar.classList.add("d-none");
+//     }
+//   });
 
-input.addEventListener("keydown", function(e){
-e
-})
