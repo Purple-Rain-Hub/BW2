@@ -37,7 +37,7 @@ Applicazione creata per farti ascoltare la musica dei tuoi artisti preferiti qua
 
 ---
 
-Se desideri contribuire al miglioramento del Quiz Game, sei il/ la benvenuto/ a !
+Se desideri contribuire al miglioramento della web app, sei il/ la benvenuto/ a !
 Puoi inviare suggerimenti , correzioni di bug, o nuove funzionalità tramite **pull request**.
 
 ## DEVELOPERS
