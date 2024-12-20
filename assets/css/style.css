@@ -516,7 +516,7 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
 
 @media screen and (min-width: 1399px) {
     .pronz{
-        width: 140px !important;
+        width: 230px !important;
         height: 20px !important;
      }
      .pronz2{
@@ -533,6 +533,29 @@ box-shadow: 0 4px 60px rgba(0,0,0,.5);
      }
      .pronz5{
         width: 480px !important;
+        height: 50px !important;
+     }
+}
+
+@media screen and (min-width: 1800px) {
+    .pronz{
+        width: 220px !important;
+        height: 20px !important;
+     }
+     .pronz2{
+        width: 145px !important;
+        height: 20px !important;
+     }
+     .pronz3{
+        width: 340px !important;
+        height: 20px !important;
+     }
+     .pronz4{
+        width: 600px !important;
+        height: 20px !important;
+     }
+     .pronz5{
+        width: 600px !important;
         height: 50px !important;
      }
 }
