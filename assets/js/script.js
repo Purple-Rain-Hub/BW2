@@ -80,14 +80,15 @@ async function getAlbum(usedID) {
 }
 
 function printSong(album) {
-    const randomSongH1 = album[0].tracks.data[Math.floor(Math.random() * album[0].tracks.data.length)];
+    puzzo=Math.floor(Math.random() * album[0].tracks.data.length);
+    const randomSongH1 = album[0].tracks.data[puzzo];
 
     songImgH1.setAttribute("src", `${randomSongH1.album.cover}`);
     songTitleH1.innerHTML = `${randomSongH1.title}`;
     albumTitleH1.innerHTML = `${randomSongH1.album.title}`;
     artistNameH1.forEach(e => {
         e.innerHTML = `${randomSongH1.artist.name}`;
-    });
+        });
     for (let i = 0; i < songCards.length; i++) {
         const randomSongCards = album[i + 1].tracks.data[Math.floor(Math.random() * album[i + 1].tracks.data.length)];
         songImg[i].setAttribute("src", `${randomSongCards.album.cover}`)
@@ -212,17 +213,41 @@ function durationTime(time) {
     return hours + ':' + minutes + ':' + seconds;
 }
 
-// const toggle = document.getElementById("search-toggle");
-// const searchBar = document.getElementById("search-bar");
-// const input = document.getElementById("search-input");
 
+const btnGrande = document.getElementById("btnGrande");
+let puzzo;
+console.log(album);
 
-// toggle.addEventListener("click", function (event) {
-//     event.preventDefault();
-//     if (searchBar.classList.contains("d-none")) {
-//       searchBar.classList.remove("d-none");
-//     } else {
-//       searchBar.classList.add("d-none");
-//     }
-//   });
+btnGrande.addEventListener("click", function (e) {
+    e.preventDefault()
+    const randomSongH1 = album[0].tracks.data[puzzo];
+    if (songAudio && !songAudio.paused) {
+        songAudio.pause();
+    }
+    playerImg.setAttribute("src", `${randomSongH1.album.cover}`)
+    playerTitle.innerHTML = `${randomSongH1.title}`;
+    playerArtist.innerHTML = `${randomSongH1.artist.name}`;
+    songAudio = new Audio(randomSongH1.preview)
+    songAudio.play();
+    totalTime.innerHTML = `${durationTime(randomSongH1.duration)}`
+    duration = randomSongH1.duration;
+    currentTimer = 0;
+    percentage = 0;
+    clearInterval(timer);
+    clearInterval(progressTimer);
+    progressTimer = setInterval(function () {
+        let progressPercentage = 25 / duration;
+        progressbar[0].setAttribute("style", `width:${percentage += progressPercentage}%`)
+        progressbar[1].setAttribute("style", `width:${percentage += progressPercentage}%`)
+    }, 250)
+    timer = setInterval(function () {
+        if (currentTimer < randomSongCards.duration) {
+            currentTimer++;
+            currentTime.innerHTML = `${durationTime(currentTimer)}`
+        }
+        else clearInterval(timer);
+    }, 1000);
 
+    playIcon.classList.replace("bi-play-circle-fill", "bi-pause-circle-fill")
+    isPlaying = true;
+})
