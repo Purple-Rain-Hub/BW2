@@ -5,7 +5,6 @@ const artistName = document.querySelectorAll(".artistName");
 const songTitle = document.querySelectorAll(".songTitle");
 const songImg = document.querySelectorAll(".songImg");
 const songList = document.getElementById("songList");
-
 let songAudio;
 let isPlaying;
 const playerImg = document.getElementById("playerImg");
@@ -82,15 +81,14 @@ function printSong(album){
     }
     const songCards = document.querySelectorAll(".songCards");
     for (let i = 0; i < 10; i++) {
-        console.log(songCards[i]);
-        
+        const randomSongCards = album[i].tracks.data[Math.floor(Math.random() * album[i].tracks.data.length)];
         songCards[i].addEventListener("click", function () {
             if (songAudio && !songAudio.paused) {
                 songAudio.pause();
             }
-            playerImg.setAttribute("src", `${songCards[i].querySelector("img").src}`)
-            playerTitle.innerHTML = `${songCards[i].querySelector(".songTitle").innerText}`;
-            playerArtist.innerHTML = `${songCards[i].querySelector(".artistName").innerText}`;
+            playerImg.setAttribute("src", `${randomSongCards.album.cover}`)
+            playerTitle.innerHTML = `${randomSongCards.title}`;
+            playerArtist.innerHTML = `${randomSongCards.artist.name}`;
             songAudio = new Audio(randomSongCards.preview)
             songAudio.play();
             totalTime.innerHTML = `${durationTime(randomSongCards.duration)}`
